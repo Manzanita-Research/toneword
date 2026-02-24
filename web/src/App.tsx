@@ -3,6 +3,7 @@ import { useAudioEngine } from './hooks/useAudioEngine';
 import { useSemanticState } from './hooks/useSemanticState';
 import { ModeToggle } from './components/ModeToggle';
 import { SourceBar } from './components/SourceBar';
+import { StudioMode } from './components/StudioMode';
 import type { Dimension, Preset } from './audio/types';
 
 function App() {
@@ -43,7 +44,6 @@ function App() {
     setBypassed(next);
     engine.toggleBypass(next);
     if (!next) {
-      // Re-apply state when un-bypassing
       engine.applyState(state);
     }
   }, [bypassed, engine, state]);
@@ -84,15 +84,14 @@ function App() {
             inputAnalyserRef={engine.inputAnalyserRef}
           />
 
-          {/* Studio mode content — placeholder for Plan 00-02 */}
-          <div className="text-text-dim text-sm">
-            <div className="mb-4 p-4 bg-surface border border-border rounded-lg">
-              Studio mode controls will be built in Plan 00-02
-            </div>
-            <div className="text-[10px] tracking-[0.15em] uppercase text-text-dim mb-2">
-              State: {JSON.stringify(state)}
-            </div>
-          </div>
+          <StudioMode
+            state={state}
+            onDimensionChange={handleDimensionChange}
+            onPresetLoad={handlePresetLoad}
+            onReset={handleReset}
+            analyserRef={engine.analyserRef}
+            filtersRef={engine.filtersRef}
+          />
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center min-h-screen pt-[72px] px-6 pb-10">
@@ -128,14 +127,6 @@ function App() {
           </div>
         </div>
       )}
-
-      {/* These props will be passed to StudioMode/PedalMode in later plans */}
-      <div className="hidden" data-props={JSON.stringify({
-        state,
-        handleDimensionChange: !!handleDimensionChange,
-        handlePresetLoad: !!handlePresetLoad,
-        handleReset: !!handleReset,
-      })} />
     </>
   );
 }
