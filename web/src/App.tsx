@@ -4,6 +4,7 @@ import { useSemanticState } from './hooks/useSemanticState';
 import { ModeToggle } from './components/ModeToggle';
 import { SourceBar } from './components/SourceBar';
 import { StudioMode } from './components/StudioMode';
+import { PedalMode } from './components/PedalMode';
 import type { Dimension, Preset } from './audio/types';
 
 function App() {
@@ -95,12 +96,15 @@ function App() {
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center min-h-screen pt-[72px] px-6 pb-10">
-          {/* Pedal mode content — placeholder for Plan 00-03 */}
-          <div className="text-text-dim text-sm">
-            <div className="mb-4 p-4 bg-surface border border-border rounded-lg">
-              Pedal mode controls will be built in Plan 00-03
-            </div>
-          </div>
+          <PedalMode
+            state={state}
+            onDimensionChange={handleDimensionChange}
+            onPresetLoad={handlePresetLoad}
+            bypassed={bypassed}
+            onBypassToggle={handleBypassToggle}
+            analyserRef={engine.analyserRef}
+            filtersRef={engine.filtersRef}
+          />
 
           <div className="flex gap-2 mt-5 items-center">
             <button
@@ -124,6 +128,11 @@ function App() {
             >
               Load Audio
             </button>
+          </div>
+
+          <div className="mt-4 text-[10px] text-text-dim text-center max-w-[300px] leading-relaxed">
+            Drag knobs up/down to adjust. Click footswitch to bypass.<br />
+            Use &#9666; &#9656; to browse presets.
           </div>
         </div>
       )}
