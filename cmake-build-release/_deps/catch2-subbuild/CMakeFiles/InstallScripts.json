@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jem/code/manzanita-research/toneword/plugin/cmake-build-release/_deps/catch2-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

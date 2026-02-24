@@ -1,0 +1,5 @@
+add_test( [==[Plugin instance name]==] /Users/jem/code/manzanita-research/toneword/plugin/cmake-build-release/Tests [==[Plugin instance name]==]  )
+set_tests_properties( [==[Plugin instance name]==] PROPERTIES WORKING_DIRECTORY /Users/jem/code/manzanita-research/toneword/plugin/cmake-build-release SKIP_RETURN_CODE 4)
+add_test( [==[Plugin accepts stereo]==] /Users/jem/code/manzanita-research/toneword/plugin/cmake-build-release/Tests [==[Plugin accepts stereo]==]  )
+set_tests_properties( [==[Plugin accepts stereo]==] PROPERTIES WORKING_DIRECTORY /Users/jem/code/manzanita-research/toneword/plugin/cmake-build-release SKIP_RETURN_CODE 4)
+set( Tests_TESTS [==[Plugin instance name]==] [==[Plugin accepts stereo]==])

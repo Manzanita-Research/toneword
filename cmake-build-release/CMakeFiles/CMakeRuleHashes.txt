@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+e3f10f5688c7b2a4f264d11ffd67f4d0 Toneword_artefacts/JuceLibraryCode/Toneword_AU/PkgInfo
+4014da20e577489a109c31efe3da229b Toneword_artefacts/JuceLibraryCode/Toneword_Standalone/PkgInfo
+6b8daed96a9b592e639896f9a9f73e01 Toneword_artefacts/JuceLibraryCode/Toneword_VST3/PkgInfo
+b5bfdc95812a2c27b334505d26fec3c9 juce_binarydata_Assets/JuceLibraryCode/BinaryData1.cpp
