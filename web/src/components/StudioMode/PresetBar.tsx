@@ -15,7 +15,7 @@ function isPresetActive(preset: Preset, state: SemanticState): boolean {
 export function PresetBar({ onPresetLoad, onReset, currentState }: PresetBarProps) {
   return (
     <div className="mb-9">
-      <div className="text-[10px] tracking-[0.2em] uppercase text-text-dim mb-5 pb-2 border-b border-border">
+      <div className="text-[10px] tracking-[0.15em] uppercase text-text-dim mb-5 pb-2 border-b border-border font-mono">
         Tone Recipes
       </div>
       <div className="flex flex-wrap gap-2 mt-4">
@@ -24,11 +24,12 @@ export function PresetBar({ onPresetLoad, onReset, currentState }: PresetBarProp
           return (
             <button
               key={preset.key}
-              className={`font-mono text-[11px] px-3.5 py-1.5 border rounded-full cursor-pointer transition-all duration-200 ${
+              className={`font-mono text-[11px] px-3.5 py-1.5 border rounded-full cursor-pointer transition-all duration-300 ease-out ${
                 active
-                  ? 'bg-body text-bg border-body'
-                  : 'bg-transparent text-text-mid border-border hover:border-body hover:text-body'
+                  ? 'bg-terracotta text-bg border-terracotta'
+                  : 'bg-transparent text-text-mid border-border hover:border-terracotta hover:text-terracotta'
               }`}
+              style={active ? { boxShadow: '0 2px 10px rgba(194, 113, 79, 0.25)' } : undefined}
               onClick={() => onPresetLoad(preset)}
             >
               {preset.name}
@@ -36,7 +37,7 @@ export function PresetBar({ onPresetLoad, onReset, currentState }: PresetBarProp
           );
         })}
         <button
-          className="font-mono text-[11px] px-3.5 py-1.5 border rounded-full cursor-pointer transition-all duration-200 bg-transparent text-text-dim border-border hover:border-bite hover:text-bite"
+          className="font-mono text-[11px] px-3.5 py-1.5 border rounded-full cursor-pointer transition-all duration-300 ease-out bg-transparent text-text-dim border-border hover:border-bite hover:text-bite"
           onClick={onReset}
         >
           Reset

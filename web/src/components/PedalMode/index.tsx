@@ -63,8 +63,8 @@ export function PedalMode({
       <div
         className="w-[280px] h-[530px] rounded-2xl relative flex flex-col items-center overflow-hidden"
         style={{
-          background: 'linear-gradient(175deg, #1c1c20 0%, #0f0f12 40%, #0a0a0d 100%)',
-          boxShadow: '0 2px 0 0 #2a2a30, 0 4px 0 0 #1a1a1e, 0 20px 60px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06)',
+          background: 'linear-gradient(175deg, #252320 0%, #1a1816 40%, #141210 100%)',
+          boxShadow: '0 2px 0 0 #3a3835, 0 4px 0 0 #2a2827, 0 20px 60px rgba(107, 58, 42, 0.15), inset 0 1px 0 rgba(255,255,255,0.06)',
           transform: 'rotateX(4deg)',
           padding: '20px 20px 24px',
         }}
@@ -83,7 +83,7 @@ export function PedalMode({
             key={i}
             className={`absolute ${pos} w-2.5 h-2.5 rounded-full`}
             style={{
-              background: 'radial-gradient(circle at 35% 35%, #3a3a40, #1a1a1e)',
+              background: 'radial-gradient(circle at 35% 35%, #3a3835, #1a1816)',
               boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6), 0 0.5px 0 rgba(255,255,255,0.08)',
             }}
           >
@@ -94,7 +94,7 @@ export function PedalMode({
                 left: '50%',
                 width: '6px',
                 height: '1px',
-                background: '#0a0a0d',
+                background: '#141210',
                 transform: 'translate(-50%, -50%) rotate(30deg)',
               }}
             />
@@ -102,10 +102,13 @@ export function PedalMode({
         ))}
 
         {/* Brand */}
-        <div className="font-display text-lg tracking-[0.08em] text-white/50 mb-0.5 text-center z-[2]">
+        <div
+          className="font-display text-lg tracking-[-0.01em] text-white/50 mb-0.5 text-center z-[2]"
+          style={{ fontVariationSettings: "'WONK' 1, 'opsz' 18" }}
+        >
           TONE<em className="text-body/70 italic">WORD</em>
         </div>
-        <div className="text-[8px] tracking-[0.25em] uppercase text-text-dim/40 mb-3.5 z-[2]">
+        <div className="font-body text-[8px] tracking-[0.2em] uppercase text-text-dim/40 mb-3.5 z-[2]">
           Semantic EQ
         </div>
 

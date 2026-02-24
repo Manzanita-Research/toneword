@@ -42,8 +42,8 @@ export function Knob({ value, color, label, onChange, small = false }: KnobProps
       <div
         className={`${size} rounded-full relative cursor-grab active:cursor-grabbing select-none touch-none`}
         style={{
-          background: 'radial-gradient(circle at 40% 35%, #3a3a40, #1a1a1e 60%, #0f0f12)',
-          boxShadow: '0 3px 8px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.3)',
+          background: 'radial-gradient(circle at 40% 35%, #3a3835, #1a1816 60%, #141210)',
+          boxShadow: '0 3px 8px rgba(107, 58, 42, 0.2), 0 1px 2px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.3)',
         }}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}

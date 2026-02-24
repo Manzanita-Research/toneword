@@ -18,7 +18,7 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
   };
 
   return (
-    <div className="flex items-center gap-3 mb-9 px-5 py-4 bg-surface border border-border rounded-lg flex-wrap">
+    <div className="flex items-center gap-3 mb-9 px-5 py-4 bg-surface border border-border rounded-lg flex-wrap" style={{ boxShadow: '0 2px 12px rgba(107, 58, 42, 0.06)' }}>
       <label className="text-[10px] tracking-[0.15em] uppercase text-text-dim whitespace-nowrap flex items-center gap-1.5">
         <span
           className={`inline-block w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
@@ -29,10 +29,10 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
       </label>
 
       <button
-        className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-200 cursor-pointer whitespace-nowrap ${
+        className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
           source === 'mic'
-            ? 'bg-body text-bg border-body'
-            : 'bg-surface-2 border-border text-text hover:border-body hover:text-body'
+            ? 'bg-terracotta text-bg border-terracotta'
+            : 'bg-surface-2 border-border text-text hover:border-terracotta hover:text-terracotta'
         }`}
         onClick={onMic}
       >
@@ -40,10 +40,10 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
       </button>
 
       <button
-        className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-200 cursor-pointer whitespace-nowrap ${
+        className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
           source && source !== 'mic'
-            ? 'bg-body text-bg border-body'
-            : 'bg-surface-2 border-border text-text hover:border-body hover:text-body'
+            ? 'bg-terracotta text-bg border-terracotta'
+            : 'bg-surface-2 border-border text-text hover:border-terracotta hover:text-terracotta'
         }`}
         onClick={() => fileInputRef.current?.click()}
       >
@@ -59,7 +59,7 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
       />
 
       {source && source !== 'mic' && (
-        <span className="text-[11px] text-text-mid overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px]">
+        <span className="text-[11px] text-text-mid overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px] font-body">
           {source}
         </span>
       )}
@@ -67,10 +67,10 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
       <div className="flex-1" />
 
       <button
-        className={`font-mono text-[10px] tracking-[0.1em] uppercase px-4 py-2 rounded-md border cursor-pointer transition-all duration-200 ml-auto whitespace-nowrap ${
+        className={`font-mono text-[10px] tracking-[0.1em] uppercase px-4 py-2 rounded-md border cursor-pointer transition-all duration-300 ease-out ml-auto whitespace-nowrap ${
           bypassed
             ? 'bg-bite text-white border-bite'
-            : 'bg-surface-2 border-border text-text hover:border-body hover:text-body'
+            : 'bg-surface-2 border-border text-text hover:border-bite hover:text-bite'
         }`}
         onClick={onBypassToggle}
       >

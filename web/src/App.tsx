@@ -68,10 +68,13 @@ function App() {
       {mode === 'studio' ? (
         <div className="max-w-[900px] mx-auto pt-[72px] px-6 pb-10">
           <header className="mb-12">
-            <div className="font-display text-[42px] tracking-[0.08em] mb-1">
+            <div
+              className="font-display text-[42px] tracking-[-0.02em] leading-[1.1] mb-1.5"
+              style={{ fontVariationSettings: "'WONK' 1, 'opsz' 42" }}
+            >
               TONE<span className="italic text-body">WORD</span>
             </div>
-            <div className="text-[11px] tracking-[0.2em] uppercase text-text-dim">
+            <div className="font-body text-[13px] tracking-[0.02em] text-text-dim" style={{ fontVariationSettings: "'opsz' 14" }}>
               Semantic EQ — speak your tone into being
             </div>
           </header>
@@ -108,13 +111,13 @@ function App() {
 
           <div className="flex gap-2 mt-5 items-center">
             <button
-              className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-body hover:text-body transition-all"
+              className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-terracotta hover:text-terracotta transition-all"
               onClick={handleMic}
             >
               Guitar In
             </button>
             <button
-              className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-body hover:text-body transition-all"
+              className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-terracotta hover:text-terracotta transition-all"
               onClick={() => {
                 const input = document.createElement('input');
                 input.type = 'file';

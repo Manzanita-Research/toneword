@@ -24,15 +24,15 @@ export function StudioMode({
 }: StudioModeProps) {
   return (
     <>
-      <div className="mb-9 border border-border rounded-lg overflow-hidden bg-surface relative">
-        <div className="absolute top-3 left-4 text-[9px] tracking-[0.2em] uppercase text-text-dim z-10">
+      <div className="mb-9 border border-border rounded-lg overflow-hidden bg-surface relative" style={{ boxShadow: '0 2px 16px rgba(107, 58, 42, 0.06)' }}>
+        <div className="absolute top-3 left-4 text-[9px] tracking-[0.15em] uppercase text-text-dim z-10 font-mono">
           Spectrum — real-time output
         </div>
         <SpectrumAnalyzer analyserRef={analyserRef} />
       </div>
 
-      <div className="mb-9 border border-border rounded-lg overflow-hidden bg-surface relative">
-        <div className="absolute top-3 left-4 text-[9px] tracking-[0.2em] uppercase text-text-dim z-10">
+      <div className="mb-9 border border-border rounded-lg overflow-hidden bg-surface relative" style={{ boxShadow: '0 2px 16px rgba(107, 58, 42, 0.06)' }}>
+        <div className="absolute top-3 left-4 text-[9px] tracking-[0.15em] uppercase text-text-dim z-10 font-mono">
           EQ Curve — composite response
         </div>
         <EQCurve filtersRef={filtersRef} state={state} />

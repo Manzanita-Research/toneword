@@ -165,13 +165,13 @@ export function OledDisplay({ state, presetName, bypassed, analyserRef, filtersR
       ctx.fillRect(x + barW / 2 - 0.5, barY - 1, 1, barH + 2);
 
       // Label
-      ctx.font = '7px "DM Mono", monospace';
+      ctx.font = '7px "Geist Mono", monospace';
       ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
       ctx.textAlign = 'center';
       ctx.fillText(dim.substring(0, 3).toUpperCase(), x + barW / 2, barY + barH + 10);
 
       // Value
-      ctx.font = '8px "DM Mono", monospace';
+      ctx.font = '8px "Geist Mono", monospace';
       ctx.fillStyle = Math.abs(val) > 0 ? col : 'rgba(255, 255, 255, 0.2)';
       ctx.fillText(val > 0 ? '+' + val : '' + val, x + barW / 2, barY + barH + 20);
     });
@@ -182,7 +182,7 @@ export function OledDisplay({ state, presetName, bypassed, analyserRef, filtersR
     if (bypassed) {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
       ctx.fillRect(0, 0, w, h);
-      ctx.font = '14px "DM Mono", monospace';
+      ctx.font = '14px "Geist Mono", monospace';
       ctx.fillStyle = 'rgba(184, 90, 90, 0.8)';
       ctx.textAlign = 'center';
       ctx.fillText('BYPASS', w / 2, h / 2 + 4);

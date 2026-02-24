@@ -13,7 +13,6 @@ const MAX_GAIN = 12;
 export function ParamTable({ filtersRef: _filtersRef, state }: ParamTableProps) {
   const [open, setOpen] = useState(false);
 
-  // Calculate gains from state (same math as AudioEngine.applyState)
   const gains = useMemo(() => {
     return BANDS.map((band) => {
       let g = 0;
@@ -32,9 +31,9 @@ export function ParamTable({ filtersRef: _filtersRef, state }: ParamTableProps) 
   };
 
   return (
-    <div className="mt-6 px-5 py-4 bg-surface border border-border rounded-lg">
+    <div className="mt-6 px-5 py-4 bg-surface border border-border rounded-lg" style={{ boxShadow: '0 2px 12px rgba(107, 58, 42, 0.06)' }}>
       <button
-        className="text-[10px] tracking-[0.15em] uppercase text-text-dim cursor-pointer bg-transparent border-none w-full text-left font-mono"
+        className="text-[10px] tracking-[0.15em] uppercase text-text-dim cursor-pointer bg-transparent border-none w-full text-left font-mono hover:text-text-mid transition-colors duration-300"
         onClick={() => setOpen(!open)}
       >
         What's happening under the hood {open ? '\u25BE' : '\u25B8'}
