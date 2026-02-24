@@ -1,0 +1,860 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e7]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e12] [cursor=pointer]: Innovating guitar EQ interface design
+        - generic [ref=e14]: Shared by Jem
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - paragraph [ref=e23]: This is a copy of a chat between Claude and Jem. Content may include unverified or unsafe content that do not represent the views of Anthropic. Shared snapshot may contain attachments and data not displayed here.
+          - button "Report" [ref=e24] [cursor=pointer]
+        - generic [ref=e27]:
+          - paragraph [ref=e32]: what are some ways we could innovate on the UX / control / feedback design of EQs for electric guitars? either as hardware pedals, VSTs, or even digital pedals / modeler plugins etc.
+          - group "Message actions" [ref=e33]:
+            - generic [ref=e35]:
+              - generic [ref=e36]: Feb 23
+              - button "Copy" [ref=e38] [cursor=pointer]:
+                - generic [ref=e39]:
+                  - img [ref=e41]
+                  - img [ref=e44]
+        - generic [ref=e47]:
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: "Great question, Jem — this is right in your wheelhouse bridging music tech, creative tools, and interface design. Here are some directions I find genuinely compelling:"
+            - heading "Spatial & Gestural Approaches" [level=2] [ref=e54]
+            - paragraph [ref=e55]:
+              - strong [ref=e56]: Body-mapped EQ
+              - text: — Use accelerometers in the guitar or a wearable to map physical movement to EQ parameters. Leaning forward boosts mids, tilting back scoops them. Your stage presence
+              - emphasis [ref=e57]: becomes
+              - text: your tone shaping.
+            - paragraph [ref=e58]:
+              - strong [ref=e59]: Touch-surface pedals
+              - text: — Replace knobs with a Kaoss Pad-style XY surface on a stompbox. X axis sweeps frequency, Y controls gain/Q. Finger pressure could control bandwidth. You'd get the immediacy of a wah but across the full spectrum.
+            - paragraph [ref=e60]:
+              - strong [ref=e61]: Proximity/gesture control
+              - text: — IR or ultrasonic sensors on a pedalboard that let you wave a foot or hand over the pedal to sweep parameters. No mechanical contact, very expressive.
+            - heading "Visual & Synesthetic Feedback" [level=2] [ref=e62]
+            - paragraph [ref=e63]:
+              - strong [ref=e64]: Spectral visualization on the pedal itself
+              - text: — A small e-ink or OLED screen showing a real-time spectral curve of your
+              - emphasis [ref=e65]: actual output signal
+              - text: ", not just the EQ settings. So you see the interaction between your playing dynamics and the EQ. Most guitarists have no idea what their signal actually looks like."
+            - paragraph [ref=e66]:
+              - strong [ref=e67]: Color-coded frequency feedback
+              - text: — LEDs or a light strip that maps frequency bands to colors in real-time. You'd develop an intuitive "I can see my tone is too warm/bright" sense. Could be on the pedal, on the guitar body, or even projected.
+            - paragraph [ref=e68]:
+              - strong [ref=e69]: Waveform "shadow"
+              - text: — Show a ghost of your dry signal overlaid with the EQ'd signal so you can see exactly what you're adding/removing. This is trivial in a VST but nobody does it well in a guitar context.
+            - heading "Intelligence & Context-Awareness" [level=2] [ref=e70]
+            - paragraph [ref=e71]:
+              - strong [ref=e72]: Reference tone matching
+              - text: — "Sound like
+              - emphasis [ref=e73]: this
+              - text: recording." Feed it a clip, it analyzes the spectral profile and generates an EQ curve to push your current signal toward that target. Neural DSP and ToneDex are sniffing around this but nobody's nailed the UX.
+            - paragraph [ref=e74]:
+              - strong [ref=e75]: Adaptive EQ that responds to playing context
+              - text: — Detects whether you're playing single notes, chords, palm mutes, or harmonics and shifts the EQ curve accordingly. A lot of what great sound engineers do live is exactly this — riding the EQ based on what the guitarist is doing moment to moment.
+            - paragraph [ref=e76]:
+              - strong [ref=e77]: Room-aware EQ
+              - text: — Use a mic to analyze room acoustics and auto-compensate. This exists in hi-fi (Sonarworks, etc.) but nobody's brought it to guitar in a musician-friendly way.
+            - paragraph [ref=e78]:
+              - strong [ref=e79]: "\"Conversation\" between guitar and amp"
+              - text: — The EQ pedal analyzes both the guitar's pickup output characteristics and the amp/modeler's response curve and suggests or auto-adjusts to fill the gaps. Your gear becomes a system that negotiates with itself.
+            - heading "Rethinking the Interaction Model" [level=2] [ref=e80]
+            - paragraph [ref=e81]:
+              - strong [ref=e82]: Semantic EQ
+              - text: — Instead of frequency/gain/Q knobs, you get sliders labeled with
+              - emphasis [ref=e83]: perceptual
+              - text: "descriptors: \"bite,\" \"warmth,\" \"presence,\" \"thump,\" \"air,\" \"honk.\" These map to complex multi-band curves under the hood. Izotope's Neutron does a version of this but it's not designed for real-time guitar performance."
+            - paragraph [ref=e84]:
+              - strong [ref=e85]: Timeline/song-structure EQ
+              - text: — In a DAW plugin context, let the guitarist paint EQ changes across song sections visually. "Verse is scooped, chorus pushes mids, bridge goes wide." Automate by structure, not by drawing automation lanes.
+            - paragraph [ref=e86]:
+              - strong [ref=e87]: Undo/compare as a first-class feature on hardware
+              - text: — A/B/C/D memory slots with instant toggle are common, but what about a
+              - emphasis [ref=e88]: history stack
+              - text: on a pedal? Twist knobs, stomp "snapshot," keep exploring, scroll back through your tonal history. The creative process is nonlinear but hardware EQ forces linearity.
+            - paragraph [ref=e89]:
+              - strong [ref=e90]: Collaborative/social tone design
+              - text: — Share and remix EQ curves. Not just presets — actual version-controlled tone recipes where you can see what someone changed and why. Git for guitar tone, basically.
+            - heading "The Oracular Angle" [level=2] [ref=e91]
+            - paragraph [ref=e92]:
+              - text: Given your songwriting tool work — imagine an EQ that listens to what you're playing and
+              - emphasis [ref=e93]: suggests
+              - text: tonal directions. Not "correcting" but offering. "Your riff has a lot of energy around 800Hz — want to lean into that or create space around it?" It becomes a creative partner rather than a tool. That's the rubber-duck philosophy applied to tone shaping.
+            - paragraph [ref=e94]:
+              - text: The biggest gap I see across all of these is that
+              - strong [ref=e95]: guitar EQ is still stuck in the audio engineering paradigm
+              - text: (frequency/gain/Q) when guitarists think in feelings, references, and body sensations. The innovation space is in translation layers between how musicians
+              - emphasis [ref=e96]: think
+              - text: about tone and how EQ
+              - emphasis [ref=e97]: actually works
+              - text: .
+          - group "Message actions" [ref=e98]:
+            - button "Copy" [ref=e102] [cursor=pointer]:
+              - generic [ref=e103]:
+                - img [ref=e105]
+                - img [ref=e108]
+        - generic [ref=e112]:
+          - paragraph [ref=e117]: i like where you’re going with semantic EQ
+          - group "Message actions" [ref=e118]:
+            - generic [ref=e120]:
+              - generic [ref=e121]: Feb 23
+              - button "Copy" [ref=e123] [cursor=pointer]:
+                - generic [ref=e124]:
+                  - img [ref=e126]
+                  - img [ref=e129]
+        - generic [ref=e132]:
+          - generic [ref=e137]:
+            - paragraph [ref=e138]: Yeah, semantic EQ feels like the ripest space — it's one of those ideas where the technology is totally ready but nobody's rethought the interface layer for musicians.
+            - paragraph [ref=e139]: "Some threads to pull on:"
+            - paragraph [ref=e140]:
+              - strong [ref=e141]: The vocabulary problem is actually the opportunity.
+              - text: Guitarists already have a rich shared lexicon — "glassy," "woody," "scooped," "creamy," "ice-picky," "boxy," "chimey," "woofy." These words aren't precise in engineering terms but they're
+              - emphasis [ref=e142]: extremely
+              - text: precise in communicative terms. Every guitarist knows what "boxy" means. Building a system that maps this vernacular to parametric curves is a genuine NLP/perceptual-audio research problem, but a tractable one — especially now.
+            - paragraph [ref=e143]:
+              - strong [ref=e144]: You could build the mapping empirically.
+              - text: "Collect a dataset: play the same riff through hundreds of EQ configurations, have guitarists label them with descriptive words. You'd end up with a perceptual embedding space where \"glassy\" and \"chimey\" are neighbors but \"glassy\" and \"woofy\" are distant. The sliders then navigate that space rather than frequency bands."
+            - paragraph [ref=e145]:
+              - strong [ref=e146]: Multi-dimensional descriptors beat single-axis sliders.
+              - text: "\"Warm\" isn't just \"boost lows.\" It's a specific combination of low-mid presence, gentle high rolloff, and maybe a subtle saturation character. A semantic slider for \"warmth\" should be moving 3-5 parameters under the hood. This is where it gets powerful — you're compressing a high-dimensional control space into intuitive handles."
+            - paragraph [ref=e147]:
+              - strong [ref=e148]: The interesting UX question is how literal vs. poetic to go.
+              - text: "You could imagine a spectrum:"
+            - list [ref=e149]:
+              - listitem [ref=e150]:
+                - strong [ref=e151]: Literal/technical-adjacent
+                - text: ": \"Bite,\" \"Body,\" \"Air,\" \"Thump\" — basically frequency-range nicknames"
+              - listitem [ref=e152]:
+                - strong [ref=e153]: Perceptual middle ground
+                - text: ": \"Warmth,\" \"Clarity,\" \"Aggression,\" \"Smoothness\" — these feel like qualities of the sound"
+              - listitem [ref=e154]:
+                - strong [ref=e155]: Poetic/synesthetic
+                - text: ": \"Velvet,\" \"Glass,\" \"Rust,\" \"Honey\" — metaphorical but surprisingly communicative"
+            - paragraph [ref=e156]:
+              - text: The most interesting version probably lets you operate at
+              - emphasis [ref=e157]: all three levels
+              - text: and even define your own vocabulary. Maybe "Rust" means something specific to
+              - emphasis [ref=e158]: your
+              - text: playing style that's different from what it means to someone else. Personal tone languages.
+            - paragraph [ref=e159]:
+              - strong [ref=e160]: Where this gets really wild is combining it with your oracular/conversational approach.
+              - text: Instead of sliders at all, you just
+              - emphasis [ref=e161]: talk to your tone
+              - text: ":"
+            - blockquote [ref=e162]:
+              - paragraph [ref=e163]: "\"More aggressive but not harsh\" \"Like my neck pickup but with more cut\" \"Somewhere between Hendrix clean and Frusciante crunch\""
+            - paragraph [ref=e164]: An LLM that understands guitar tone vocabulary, has access to the parametric EQ engine, and has learned your personal preferences over time could absolutely do this. The latency requirements are the hard part for live use, but for studio/writing contexts it's very doable right now.
+            - paragraph [ref=e165]:
+              - strong [ref=e166]: The feedback loop matters a lot here.
+              - text: When you move a "Warmth" slider, you need to
+              - emphasis [ref=e167]: feel
+              - text: "confident about what's happening. Some ideas:"
+            - list [ref=e168]:
+              - listitem [ref=e169]:
+                - text: A subtle spectral visualization that morphs as you move semantic controls, so you build intuition about what "warmth" means in frequency terms over time — the tool
+                - emphasis [ref=e170]: teaches you
+                - text: while you use it
+              - listitem [ref=e171]: Audio previews that exaggerate the effect so you can hear the direction before committing to the amount
+              - listitem [ref=e172]: A "why" button — tap it and it tells you "Warmth is currently boosting 200-400Hz by 3dB and rolling off above 6kHz"
+            - paragraph [ref=e173]:
+              - text: This last point is important because the tool shouldn't be a black box. The best creative tools build your understanding over time rather than hiding complexity permanently. You want musicians to graduate from "I like warmth" to "oh,
+              - emphasis [ref=e174]: that's
+              - text: what 250Hz does" — the semantic layer is a bridge, not a wall.
+            - paragraph [ref=e175]: What's your instinct on form factor? Are you thinking more VST/plugin, something for a modeler ecosystem like Helix/QC, or a standalone hardware concept?
+          - group "Message actions" [ref=e176]:
+            - button "Copy" [ref=e180] [cursor=pointer]:
+              - generic [ref=e181]:
+                - img [ref=e183]
+                - img [ref=e186]
+        - generic [ref=e190]:
+          - paragraph [ref=e195]: i think starting with a web audio prototype would be great - then we’ll turn it into a version that can run on a standalone pedal
+          - group "Message actions" [ref=e196]:
+            - generic [ref=e198]:
+              - generic [ref=e199]: Feb 23
+              - button "Copy" [ref=e201] [cursor=pointer]:
+                - generic [ref=e202]:
+                  - img [ref=e204]
+                  - img [ref=e207]
+        - generic [ref=e210]:
+          - generic [ref=e213]:
+            - generic [ref=e215]:
+              - paragraph [ref=e216]: Smart approach — Web Audio API gives you a fast iteration loop, easy sharing for feedback, and the audio graph primitives (BiquadFilterNode, etc.) map pretty directly to what you'd eventually run on DSP hardware.
+              - paragraph [ref=e217]: Let me read the frontend design skill first, then build this out.
+            - generic [ref=e219]:
+              - generic [ref=e221]:
+                - button "Read frontend design skill for building the prototype" [ref=e222] [cursor=pointer]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: Read frontend design skill for building the prototype
+                    - img [ref=e227]
+                - status [ref=e229]: Read frontend design skill for building the prototype
+                - generic [ref=e230]:
+                  - generic [ref=e238]:
+                    - img [ref=e242]
+                    - button "Read frontend design skill for building the prototype" [ref=e246] [cursor=pointer]:
+                      - generic [ref=e248]: Read frontend design skill for building the prototype
+                  - generic [ref=e258]:
+                    - img [ref=e262]
+                    - generic [ref=e265]: Done
+              - paragraph [ref=e273]: Now let me build the prototype. I'm going to create a Web Audio-powered semantic EQ with a rich, guitar-culture-appropriate aesthetic.
+            - generic [ref=e275]:
+              - generic [ref=e277]:
+                - button "Created a file, ran a command, read a file" [ref=e278] [cursor=pointer]:
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: Created a file, ran a command, read a file
+                    - img [ref=e283]
+                - status [ref=e285]: Created a file, ran a command, read a file
+                - generic [ref=e286]:
+                  - generic [ref=e293]:
+                    - generic [ref=e294]:
+                      - img [ref=e297]
+                      - button "Create a semantic EQ web audio prototype with perceptual tone descriptors mapped to parametric EQ curves" [ref=e300] [cursor=pointer]:
+                        - generic [ref=e302]: Create a semantic EQ web audio prototype with perceptual tone descriptors mapped to parametric EQ curves
+                    - button "semantic-eq.html" [ref=e308] [cursor=pointer]:
+                      - generic [ref=e309]: semantic-eq.html
+                  - generic [ref=e319]:
+                    - generic [ref=e320]:
+                      - img [ref=e323]
+                      - button "Copy to outputs" [ref=e328] [cursor=pointer]:
+                        - generic [ref=e330]: Copy to outputs
+                    - button "Script" [ref=e336] [cursor=pointer]:
+                      - generic [ref=e337]: Script
+                  - generic [ref=e348]:
+                    - img [ref=e351]
+                    - button "Presented file" [ref=e354]:
+                      - generic [ref=e356]: Presented file
+                  - generic [ref=e366]:
+                    - img [ref=e370]
+                    - generic [ref=e373]: Done
+              - generic [ref=e380]:
+                - paragraph [ref=e381]:
+                  - text: Here's
+                  - strong [ref=e382]: TONEWORD
+                  - text: "— a working semantic EQ prototype. Here's what it does:"
+                - paragraph [ref=e383]:
+                  - strong [ref=e384]: Six tone dimensions
+                  - text: — Warmth, Bite, Air, Body, Glass, Velvet — each mapped to a multi-band parametric EQ engine under the hood (11 bands total). Moving "Warmth" isn't just boosting lows — it's simultaneously boosting 200-500Hz, gently rolling off highs, and slightly reducing upper-mid harshness. Each dimension touches 3-6 bands with different weights.
+                - paragraph [ref=e385]:
+                  - strong [ref=e386]: "What to try:"
+                - list [ref=e387]:
+                  - listitem [ref=e388]:
+                    - text: Hit
+                    - strong [ref=e389]: Mic / Guitar In
+                    - text: and plug your guitar into an audio interface — it processes live with minimal latency (echo cancellation and noise suppression disabled for clean signal)
+                  - listitem [ref=e390]:
+                    - text: Or
+                    - strong [ref=e391]: Load Audio
+                    - text: with any guitar recording
+                  - listitem [ref=e392]:
+                    - text: The
+                    - strong [ref=e393]: Tone Recipes
+                    - text: presets show how the dimensions combine (Midnight Jazz cranks Velvet while cutting Bite; Nashville Twang does the opposite)
+                  - listitem [ref=e394]:
+                    - text: Open
+                    - strong [ref=e395]: "\"What's happening under the hood\""
+                    - text: to see the actual parametric EQ values in real-time — this is the teaching layer so you build frequency intuition over time
+                  - listitem [ref=e396]:
+                    - text: The
+                    - strong [ref=e397]: EQ Curve
+                    - text: shows the composite frequency response, and the
+                    - strong [ref=e398]: Spectrum
+                    - text: shows your actual output signal
+                - paragraph [ref=e399]:
+                  - strong [ref=e400]: "Key design decisions:"
+                - list [ref=e401]:
+                  - listitem [ref=e402]: Bipolar sliders (-100 to +100) so each word works both ways — negative Warmth is "cold/thin," negative Bite is "smooth/recessed"
+                  - listitem [ref=e403]:
+                    - text: Soft-clipping via
+                    - code [ref=e404]: tanh
+                    - text: prevents stacking multiple dimensions from producing extreme gains
+                  - listitem [ref=e405]:
+                    - text: The gain mappings include
+                    - emphasis [ref=e406]: negative
+                    - text: cross-coupling — boosting Glass automatically cuts some of the frequencies that Velvet boosts, which mirrors how these qualities actually oppose each other perceptually
+                - paragraph [ref=e407]: Good starting point for iteration. Next steps could be adding the conversational/text-prompt interface, custom vocabulary definitions, or an A/B snapshot history.
+          - group "Message actions" [ref=e408]:
+            - button "Copy" [ref=e412] [cursor=pointer]:
+              - generic [ref=e413]:
+                - img [ref=e415]
+                - img [ref=e418]
+        - generic [ref=e422]:
+          - paragraph [ref=e427]: looks incredible. can you make a UI toggle that makes it appropriate for a simple pedal with a digital display?
+          - group "Message actions" [ref=e428]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: Feb 23
+              - button "Copy" [ref=e433] [cursor=pointer]:
+                - generic [ref=e434]:
+                  - img [ref=e436]
+                  - img [ref=e439]
+        - generic [ref=e442]:
+          - generic [ref=e445]:
+            - paragraph [ref=e448]: Great idea — let me build a pedal mode view that strips it down to what you'd see on a small OLED-style screen.
+            - generic [ref=e450]:
+              - generic [ref=e452]:
+                - button "Viewed 4 files" [ref=e453] [cursor=pointer]:
+                  - generic [ref=e454]:
+                    - generic [ref=e455]: Viewed 4 files
+                    - img [ref=e458]
+                - status [ref=e460]: Viewed 4 files
+                - generic [ref=e461]:
+                  - generic [ref=e469]:
+                    - img [ref=e472]
+                    - button "Review the current file structure to plan the pedal mode addition" [ref=e475] [cursor=pointer]:
+                      - generic [ref=e477]: Review the current file structure to plan the pedal mode addition
+                  - generic [ref=e488]:
+                    - img [ref=e491]
+                    - button "See the rest of the HTML structure and JS" [ref=e494] [cursor=pointer]:
+                      - generic [ref=e496]: See the rest of the HTML structure and JS
+                  - generic [ref=e507]:
+                    - img [ref=e510]
+                    - button "See the JS section" [ref=e513] [cursor=pointer]:
+                      - generic [ref=e515]: See the JS section
+                  - generic [ref=e526]:
+                    - img [ref=e529]
+                    - button "See the rest of the file" [ref=e532] [cursor=pointer]:
+                      - generic [ref=e534]: See the rest of the file
+                  - generic [ref=e544]:
+                    - img [ref=e548]
+                    - generic [ref=e551]: Done
+              - paragraph [ref=e559]: Now I have the full picture. I'll rebuild this with a pedal mode that simulates a realistic hardware enclosure with a small OLED display, physical-looking knobs, and a footswitch — the kind of thing you'd see on a Strymon or Chase Bliss-style digital pedal.
+            - generic [ref=e563]:
+              - button "Created 2 files, ran a command" [ref=e564] [cursor=pointer]:
+                - generic [ref=e565]:
+                  - generic [ref=e566]: Created 2 files, ran a command
+                  - img [ref=e569]
+              - status [ref=e571]: Created 2 files, ran a command
+              - generic [ref=e572]:
+                - generic [ref=e579]:
+                  - generic [ref=e580]:
+                    - img [ref=e583]
+                    - button "Create TONEWORD semantic EQ with studio mode and pedal hardware mode toggle. Pedal mode simulates a realistic guitar pedal enclosure with OLED display, rotary encoder-style knobs, footswitch, and LED indicator." [ref=e586] [cursor=pointer]:
+                      - generic [ref=e588]: Create TONEWORD semantic EQ with studio mode and pedal hardware mode toggle. Pedal mode simulates a realistic guitar pedal enclosure with OLED display, rotary encoder-style knobs, footswitch, and LED indicator.
+                  - button "semantic-eq.html" [ref=e594] [cursor=pointer]:
+                    - generic [ref=e595]: semantic-eq.html
+                - generic [ref=e605]:
+                  - generic [ref=e606]:
+                    - img [ref=e609]
+                    - button "Remove old file to recreate" [ref=e614] [cursor=pointer]:
+                      - generic [ref=e616]: Remove old file to recreate
+                  - button "Script" [ref=e622] [cursor=pointer]:
+                    - generic [ref=e623]: Script
+                - generic [ref=e633]:
+                  - generic [ref=e634]:
+                    - img [ref=e637]
+                    - button "Create TONEWORD v2 with studio + pedal mode toggle" [ref=e640] [cursor=pointer]:
+                      - generic [ref=e642]: Create TONEWORD v2 with studio + pedal mode toggle
+                  - generic [ref=e653]:
+                    - paragraph [ref=e655]: text
+                    - code [ref=e657]:
+                      - generic [ref=e658]: <!DOCTYPE html>
+                      - text: "<html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>TONEWORD — Semantic EQ</title> <style> @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap'); :root { --bg: #0a0a0b; --surface: #131315; --surface-2: #1a1a1e; --border: #2a2a30; --text: #e8e4df; --text-dim: #78756f; --text-mid: #a8a49e; --accent-warm: #c4723a; --accent-gold: #b89a5a; --accent-ice: #5a8ab8; --accent-velvet: #8a5ab8; --accent-rust: #b85a5a; --accent-glass: #5ab8a8; } * { margin: 0; padding: 0; box-sizing: border-box; } body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; } body::before { content: ''; position: fixed; inset: 0; opacity: 0.03; background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\"); pointer-events: none; z-index: 1000; } /* ========== MODE TOGGLE ========== */ .mode-toggle-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: center; padding: 12px; background: rgba(10, 10, 11, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); } .mode-toggle { display: flex; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; } .mode-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 20px; border: none; background: transparent; color: var(--text-dim); cursor: pointer; transition: all 0.2s; } .mode-btn:hover { color: var(--text); } .mode-btn.active { background: var(--accent-gold); color: var(--bg); } /* ========== STUDIO MODE ========== */ .studio-mode { max-width: 900px; margin: 0 auto; padding: 72px 24px 40px; } .studio-mode.hidden { display: none; } header { margin-bottom: 48px; } .logo { font-family: 'Instrument Serif', serif; font-size: 42px; letter-spacing: 0.08em; color: var(--text); margin-bottom: 4px; } .logo span { font-style: italic; color: var(--accent-gold); } .subtitle { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); } .source-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 36px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; } .source-bar label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); white-space: nowrap; } .btn { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font-family: 'DM Mono', monospace; font-size: 12px; padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: all 0.2s; white-space: nowrap; } .btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); } .btn.active { background: var(--accent-gold); color: var(--bg); border-color: var(--accent-gold); } .btn-bypass { margin-left: auto; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; } .btn-bypass.bypassed { background: var(--accent-rust); color: white; border-color: var(--accent-rust); } .file-name { font-size: 11px; color: var(--text-mid); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 200px; } .analyzer-wrap, .curve-wrap { position: relative; margin-bottom: 36px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); } .analyzer-label, .curve-label { position: absolute; top: 12px; left: 16px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); z-index: 2; } #analyzer { width: 100%; height: 160px; display: block; } #eqCurve { width: 100%; height: 140px; display: block; } .sliders-section { margin-bottom: 36px; } .section-title { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--border); } .slider-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; } .slider-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; } .slider-name { font-family: 'Instrument Serif', serif; font-size: 20px; transition: color 0.3s; } .slider-value { font-size: 11px; color: var(--text-dim); font-variant-numeric: tabular-nums; } .slider-desc { font-size: 10px; color: var(--text-dim); margin-bottom: 10px; line-height: 1.5; } .semantic-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: var(--surface-2); outline: none; } .semantic-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; cursor: grab; border: 2px solid; transition: transform 0.1s; } .semantic-slider::-webkit-slider-thumb:hover { transform: scale(1.2); } .semantic-slider::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; cursor: grab; border: 2px solid; } .slider-warmth .semantic-slider::-webkit-slider-thumb, .slider-warmth .semantic-slider::-moz-range-thumb { background: var(--accent-warm); border-color: var(--accent-warm); } .slider-warmth .slider-name { color: var(--accent-warm); } .slider-bite .semantic-slider::-webkit-slider-thumb, .slider-bite .semantic-slider::-moz-range-thumb { background: var(--accent-rust); border-color: var(--accent-rust); } .slider-bite .slider-name { color: var(--accent-rust); } .slider-air .semantic-slider::-webkit-slider-thumb, .slider-air .semantic-slider::-moz-range-thumb { background: var(--accent-ice); border-color: var(--accent-ice); } .slider-air .slider-name { color: var(--accent-ice); } .slider-body .semantic-slider::-webkit-slider-thumb, .slider-body .semantic-slider::-moz-range-thumb { background: var(--accent-gold); border-color: var(--accent-gold); } .slider-body .slider-name { color: var(--accent-gold); } .slider-glass .semantic-slider::-webkit-slider-thumb, .slider-glass .semantic-slider::-moz-range-thumb { background: var(--accent-glass); border-color: var(--accent-glass); } .slider-glass .slider-name { color: var(--accent-glass); } .slider-velvet .semantic-slider::-webkit-slider-thumb, .slider-velvet .semantic-slider::-moz-range-thumb { background: var(--accent-velvet); border-color: var(--accent-velvet); } .slider-velvet .slider-name { color: var(--accent-velvet); } .presets-section { margin-bottom: 36px; } .presets-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; } .preset-chip { font-family: 'DM Mono', monospace; font-size: 11px; padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px; background: transparent; color: var(--text-mid); cursor: pointer; transition: all 0.2s; } .preset-chip:hover { border-color: var(--accent-gold); color: var(--accent-gold); } .preset-chip.active { background: var(--accent-gold); color: var(--bg); border-color: var(--accent-gold); } .param-reveal { margin-top: 24px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; } .param-reveal summary { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); cursor: pointer; } .param-table { margin-top: 12px; width: 100%; font-size: 11px; color: var(--text-dim); border-collapse: collapse; } .param-table th { text-align: left; font-weight: 400; color: var(--text-mid); padding: 4px 12px 4px 0; border-bottom: 1px solid var(--border); } .param-table td { padding: 4px 12px 4px 0; font-variant-numeric: tabular-nums; } .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); display: inline-block; margin-right: 6px; transition: background 0.3s; } .status-dot.live { background: #4ade80; animation: pulse 2s infinite; } @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } } .input-meter { flex: 1; min-width: 60px; height: 4px; background: var(--surface-2); border-radius: 2px; overflow: hidden; } .input-meter-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent-gold), var(--accent-warm)); border-radius: 2px; transition: width 0.05s; } #fileInput { display: none; } @media (max-width: 640px) { .slider-grid { grid-template-columns: 1fr; } .logo { font-size: 32px; } .source-bar { flex-wrap: wrap; } } /* ========== PEDAL MODE ========== */ .pedal-mode { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 72px 24px 40px; } .pedal-mode.hidden { display: none; } .pedal-scene { perspective: 900px; display: flex; flex-direction: column; align-items: center; } .pedal-enclosure { width: 280px; height: 530px; background: linear-gradient(175deg, #1c1c20 0%, #0f0f12 40%, #0a0a0d 100%); border-radius: 16px; position: relative; box-shadow: 0 2px 0 0 #2a2a30, 0 4px 0 0 #1a1a1e, 0 20px 60px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06); transform: rotateX(4deg); display: flex; flex-direction: column; align-items: center; padding: 20px 20px 24px; overflow: hidden; } .pedal-enclosure::before { content: ''; position: absolute; inset: 0; border-radius: 16px; background: repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255,255,255,0.008) 1px, rgba(255,255,255,0.008) 2px); pointer-events: none; } .pedal-screw { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #3a3a40, #1a1a1e); box-shadow: inset 0 1px 2px rgba(0,0,0,0.6), 0 0.5px 0 rgba(255,255,255,0.08); } .pedal-screw::after { content: ''; position: absolute; top: 50%; left: 50%; width: 6px; height: 1px; background: #0a0a0d; transform: translate(-50%, -50%) rotate(30deg); } .pedal-screw.tl { top: 10px; left: 10px; } .pedal-screw.tr { top: 10px; right: 10px; } .pedal-screw.bl { bottom: 10px; left: 10px; } .pedal-screw.br { bottom: 10px; right: 10px; } .pedal-brand { font-family: 'Instrument Serif', serif; font-size: 18px; letter-spacing: 0.08em; color: rgba(232, 228, 223, 0.5); margin-bottom: 2px; text-align: center; z-index: 2; } .pedal-brand em { color: var(--accent-gold); font-style: italic; opacity: 0.7; } .pedal-type { font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(120, 117, 111, 0.4); margin-bottom: 14px; z-index: 2; } .oled-display { width: 236px; height: 140px; background: #000; border-radius: 4px; position: relative; margin-bottom: 16px; z-index: 2; box-shadow: inset 0 0 12px rgba(0,0,0,1), 0 0.5px 0 rgba(255,255,255,0.05); overflow: hidden; border: 1px solid #0a0a0d; } .oled-display::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 40%); pointer-events: none; z-index: 10; border-radius: 4px; } #pedalScreen { width: 100%; height: 100%; display: block; } .knobs-row { display: flex; gap: 14px; margin-bottom: 10px; z-index: 2; width: 100%; justify-content: center; } .knob-assembly { display: flex; flex-direction: column; align-items: center; gap: 5px; } .knob-label { font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232, 228, 223, 0.35); text-align: center; } .knob { width: 50px; height: 50px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #3a3a40, #1a1a1e 60%, #0f0f12); box-shadow: 0 3px 8px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.3); position: relative; cursor: grab; user-select: none; touch-action: none; } .knob:active { cursor: grabbing; } .knob-indicator { position: absolute; top: 6px; left: 50%; width: 2px; height: 13px; border-radius: 1px; transform-origin: bottom center; transform: translateX(-50%); } .knob-ring { position: absolute; inset: -4px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); pointer-events: none; } .knob.small { width: 34px; height: 34px; } .knob.small .knob-indicator { top: 4px; height: 9px; } .pedal-nav-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; z-index: 2; } .pedal-nav-btn { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #2a2a30, #16161a); border: none; color: rgba(232, 228, 223, 0.4); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06); transition: all 0.15s; } .pedal-nav-btn:hover { color: var(--accent-gold); } .pedal-nav-btn:active { transform: scale(0.95); } .pedal-preset-name { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232, 228, 223, 0.5); min-width: 100px; text-align: center; } .footswitch-area { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 2; } .led-indicator { width: 8px; height: 8px; border-radius: 50%; background: #1a0a0a; border: 1px solid rgba(255,255,255,0.05); transition: all 0.15s; } .led-indicator.on { background: #e04040; box-shadow: 0 0 8px rgba(224, 64, 64, 0.6), 0 0 20px rgba(224, 64, 64, 0.25); } .footswitch { width: 52px; height: 52px; border-radius: 50%; background: radial-gradient(circle at 42% 38%, #4a4a52, #2a2a30 50%, #1a1a1e); border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.08), inset 0 -2px 0 rgba(0,0,0,0.3); transition: all 0.1s; position: relative; } .footswitch:active { box-shadow: 0 2px 6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05); transform: translateY(1px); } .footswitch::after { content: ''; position: absolute; top: 50%; left: 50%; width: 24px; height: 24px; border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle at 45% 40%, rgba(255,255,255,0.06), transparent); } .pedal-jacks { display: flex; justify-content: space-between; width: 280px; padding: 0 30px; margin-top: 6px; } .jack-label { font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(120, 117, 111, 0.3); } .pedal-source-bar { display: flex; gap: 8px; margin-top: 20px; align-items: center; } .pedal-source-bar .btn { font-size: 10px; padding: 6px 12px; } .pedal-hint { margin-top: 16px; font-size: 10px; color: var(--text-dim); text-align: center; max-width: 300px; line-height: 1.6; } </style> </head> <body> <div class=\"mode-toggle-bar\"> <div class=\"mode-toggle\"> <button class=\"mode-btn active\" id=\"modeStudio\" onclick=\"setMode('studio')\">Studio</button> <button class=\"mode-btn\" id=\"modePedal\" onclick=\"setMode('pedal')\">Pedal</button> </div> </div> <!-- STUDIO MODE --> <div class=\"studio-mode\" id=\"studioView\"> <header> <div class=\"logo\">TONE<span>WORD</span></div> <div class=\"subtitle\">Semantic EQ — speak your tone into being</div> </header> <div class=\"source-bar\"> <label><span class=\"status-dot\" id=\"statusDot\"></span>Source</label> <button class=\"btn\" id=\"btnMic\" onclick=\"startMic()\">Mic / Guitar In</button> <button class=\"btn\" id=\"btnFile\" onclick=\"document.getElementById('fileInput').click()\">Load Audio</button> <input type=\"file\" id=\"fileInput\" accept=\"audio/*\" onchange=\"loadFile(event)\"> <span class=\"file-name\" id=\"fileName\"></span> <div class=\"input-meter\"><div class=\"input-meter-fill\" id=\"inputMeter\"></div></div> <button class=\"btn btn-bypass\" id=\"btnBypass\" onclick=\"toggleBypass()\">Bypass</button> </div> <div class=\"analyzer-wrap\"> <div class=\"analyzer-label\">Spectrum — real-time output</div> <canvas id=\"analyzer\"></canvas> </div> <div class=\"curve-wrap\"> <div class=\"curve-label\">EQ Curve — composite response</div> <canvas id=\"eqCurve\"></canvas> </div> <div class=\"sliders-section\"> <div class=\"section-title\">Tone Words</div> <div class=\"slider-grid\"> <div class=\"slider-group slider-warmth\"><div class=\"slider-header\"><span class=\"slider-name\">Warmth</span><span class=\"slider-value\" id=\"val-warmth\">0</span></div><div class=\"slider-desc\">Low-mid presence, gentle high rolloff. Tube amp glow.</div><input type=\"range\" class=\"semantic-slider\" id=\"warmth\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> <div class=\"slider-group slider-bite\"><div class=\"slider-header\"><span class=\"slider-name\">Bite</span><span class=\"slider-value\" id=\"val-bite\">0</span></div><div class=\"slider-desc\">Upper-mid aggression. Pick attack. Cuts through a mix.</div><input type=\"range\" class=\"semantic-slider\" id=\"bite\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> <div class=\"slider-group slider-air\"><div class=\"slider-header\"><span class=\"slider-name\">Air</span><span class=\"slider-value\" id=\"val-air\">0</span></div><div class=\"slider-desc\">Shimmer and openness above 8kHz. Acoustic sparkle.</div><input type=\"range\" class=\"semantic-slider\" id=\"air\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> <div class=\"slider-group slider-body\"><div class=\"slider-header\"><span class=\"slider-name\">Body</span><span class=\"slider-value\" id=\"val-body\">0</span></div><div class=\"slider-desc\">Fundamental weight. The chest-resonance of a dreadnought.</div><input type=\"range\" class=\"semantic-slider\" id=\"body\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> <div class=\"slider-group slider-glass\"><div class=\"slider-header\"><span class=\"slider-name\">Glass</span><span class=\"slider-value\" id=\"val-glass\">0</span></div><div class=\"slider-desc\">Crystalline presence. Fender cleans. Bell-like clarity.</div><input type=\"range\" class=\"semantic-slider\" id=\"glass\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> <div class=\"slider-group slider-velvet\"><div class=\"slider-header\"><span class=\"slider-name\">Velvet</span><span class=\"slider-value\" id=\"val-velvet\">0</span></div><div class=\"slider-desc\">Smooth darkness. Jazz neck pickup. Rolled-off silk.</div><input type=\"range\" class=\"semantic-slider\" id=\"velvet\" min=\"-100\" max=\"100\" value=\"0\" oninput=\"onSlider()\"></div> </div> </div> <div class=\"presets-section\"> <div class=\"section-title\">Tone Recipes</div> <div class=\"presets-grid\"> <button class=\"preset-chip\" onclick=\"applyPreset('flat')\">Flat</button> <button class=\"preset-chip\" onclick=\"applyPreset('nashville')\">Nashville Twang</button> <button class=\"preset-chip\" onclick=\"applyPreset('hendrix')\">Hendrix Clean</button> <button class=\"preset-chip\" onclick=\"applyPreset('jazz')\">Midnight Jazz</button> <button class=\"preset-chip\" onclick=\"applyPreset('punk')\">Punk Scoop</button> <button class=\"preset-chip\" onclick=\"applyPreset('lofi')\">Lo-fi Tape</button> <button class=\"preset-chip\" onclick=\"applyPreset('acoustic')\">Open Acoustic</button> <button class=\"preset-chip\" onclick=\"applyPreset('metal')\">Scooped Metal</button> </div> </div> <details class=\"param-reveal\"> <summary>What's happening under the hood ↓</summary> <table class=\"param-table\"><thead><tr><th>Band</th><th>Type</th><th>Freq</th><th>Gain</th><th>Q</th></tr></thead><tbody id=\"paramBody\"></tbody></table> </details> </div> <!-- PEDAL MODE --> <div class=\"pedal-mode hidden\" id=\"pedalView\"> <div class=\"pedal-scene\"> <div class=\"pedal-enclosure\"> <div class=\"pedal-screw tl\"></div><div class=\"pedal-screw tr\"></div> <div class=\"pedal-screw bl\"></div><div class=\"pedal-screw br\"></div> <div class=\"pedal-brand\">TONE<em>WORD</em></div> <div class=\"pedal-type\">Semantic EQ</div> <div class=\"oled-display\"><canvas id=\"pedalScreen\"></canvas></div> <div class=\"knobs-row\"> <div class=\"knob-assembly\"><div class=\"knob-label\">Warmth</div><div class=\"knob\" id=\"knobA\" data-dim=\"warmth\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-warm)\"></div><div class=\"knob-ring\"></div></div></div> <div class=\"knob-assembly\"><div class=\"knob-label\">Bite</div><div class=\"knob\" id=\"knobB\" data-dim=\"bite\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-rust)\"></div><div class=\"knob-ring\"></div></div></div> <div class=\"knob-assembly\"><div class=\"knob-label\">Air</div><div class=\"knob\" id=\"knobC\" data-dim=\"air\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-ice)\"></div><div class=\"knob-ring\"></div></div></div> </div> <div class=\"knobs-row\"> <div class=\"knob-assembly\"><div class=\"knob-label\">Body</div><div class=\"knob small\" id=\"knobD\" data-dim=\"body\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-gold)\"></div></div></div> <div class=\"knob-assembly\"><div class=\"knob-label\">Glass</div><div class=\"knob small\" id=\"knobE\" data-dim=\"glass\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-glass)\"></div></div></div> <div class=\"knob-assembly\"><div class=\"knob-label\">Velvet</div><div class=\"knob small\" id=\"knobF\" data-dim=\"velvet\" data-angle=\"0\"><div class=\"knob-indicator\" style=\"background:var(--accent-velvet)\"></div></div></div> </div> <div class=\"pedal-nav-row\"> <button class=\"pedal-nav-btn\" onclick=\"cyclePedalPreset(-1)\">◂</button> <span class=\"pedal-preset-name\" id=\"pedalPresetName\">— custom —</span> <button class=\"pedal-nav-btn\" onclick=\"cyclePedalPreset(1)\">▸</button> </div> <div class=\"footswitch-area\"> <div class=\"led-indicator on\" id=\"pedalLed\"></div> <button class=\"footswitch\" onclick=\"toggleBypass()\"></button> </div> </div> <div class=\"pedal-jacks\"><span class=\"jack-label\">← Input</span><span class=\"jack-label\">Output →</span></div> <div class=\"pedal-source-bar\"> <button class=\"btn\" id=\"btnMicPedal\" onclick=\"startMic()\">Guitar In</button> <button class=\"btn\" id=\"btnFilePedal\" onclick=\"document.getElementById('fileInput').click()\">Load Audio</button> </div> <div class=\"pedal-hint\">Drag knobs up/down to adjust. Click footswitch to bypass.<br>Use ◂ ▸ to browse presets.</div> </div> </div> <script> // ============================================================ // TONEWORD — Semantic EQ Engine // ============================================================ let audioCtx, analyserNode, inputAnalyser; let filters = []; let bypassed = false; let animFrame; let currentSource = null; let currentMode = 'studio'; const BANDS = [ { freq: 60, type: 'lowshelf', baseQ: 0.7, gainMap: { body: 0.6, velvet: 0.3, warmth: 0.2 } }, { freq: 150, type: 'peaking', baseQ: 1.0, gainMap: { body: 0.8, warmth: 0.4, velvet: 0.2 } }, { freq: 300, type: 'peaking', baseQ: 1.2, gainMap: { warmth: 0.9, body: 0.3, velvet: 0.3, glass: -0.3 } }, { freq: 500, type: 'peaking', baseQ: 1.5, gainMap: { warmth: 0.4, velvet: 0.4, bite: -0.3, glass: -0.4 } }, { freq: 800, type: 'peaking', baseQ: 1.4, gainMap: { bite: 0.5, glass: 0.4, velvet: -0.5 } }, { freq: 1500, type: 'peaking', baseQ: 1.2, gainMap: { bite: 0.8, glass: 0.3, warmth: -0.3, velvet: -0.6 } }, { freq: 2500, type: 'peaking', baseQ: 1.0, gainMap: { bite: 0.9, glass: 0.6, warmth: -0.5, velvet: -0.8 } }, { freq: 4000, type: 'peaking', baseQ: 0.9, gainMap: { glass: 0.9, bite: 0.4, air: 0.3, warmth: -0.6, velvet: -0.7 } }, { freq: 6500, type: 'peaking', baseQ: 0.8, gainMap: { glass: 0.6, air: 0.6, velvet: -0.5, warmth: -0.4 } }, { freq: 10000, type: 'highshelf', baseQ: 0.7, gainMap: { air: 0.9, glass: 0.3, velvet: -0.6, warmth: -0.5 } }, { freq: 14000, type: 'peaking', baseQ: 0.6, gainMap: { air: 0.7, glass: 0.2, velvet: -0.3 } }, ]; const DIMENSIONS = ['warmth', 'bite', 'air', 'body', 'glass', 'velvet']; const DIM_COLORS = { warmth: '#c4723a', bite: '#b85a5a', air: '#5a8ab8', body: '#b89a5a', glass: '#5ab8a8', velvet: '#8a5ab8' }; const PRESETS = { flat: { warmth: 0, bite: 0, air: 0, body: 0, glass: 0, velvet: 0 }, nashville: { warmth: -20, bite: 60, air: 40, body: -10, glass: 50, velvet: -40 }, hendrix: { warmth: 40, bite: 20, air: 10, body: 30, glass: 30, velvet: -10 }, jazz: { warmth: 50, bite: -60, air: -30, body: 40, glass: -40, velvet: 80 }, punk: { warmth: -30, bite: 80, air: -10, body: 50, glass: -20, velvet: -60 }, lofi: { warmth: 60, bite: -40, air: -60, body: 20, glass: -50, velvet: 50 }, acoustic: { warmth: 20, bite: 10, air: 60, body: 50, glass: 40, velvet: -20 }, metal: { warmth: -20, bite: 70, air: 20, body: 70, glass: -30, velvet: -70 }, }; const PRESET_NAMES = Object.keys(PRESETS); const PRESET_DISPLAY = { flat:'Flat', nashville:'Nashville', hendrix:'Hendrix Clean', jazz:'Midnight Jazz', punk:'Punk Scoop', lofi:'Lo-fi Tape', acoustic:'Open Acoustic', metal:'Scooped Metal' }; let pedalPresetIndex = -1; let semanticState = { warmth: 0, bite: 0, air: 0, body: 0, glass: 0, velvet: 0 }; // Audio engine function initAudio() { if (audioCtx) return; audioCtx = new (window.AudioContext || window.webkitAudioContext)(); filters = BANDS.map(b => { const f = audioCtx.createBiquadFilter(); f.type = b.type; f.frequency.value = b.freq; f.Q.value = b.baseQ; f.gain.value = 0; return f; }); for (let i = 0; i < filters.length - 1; i++) filters[i].connect(filters[i+1]); analyserNode = audioCtx.createAnalyser(); analyserNode.fftSize = 4096; analyserNode.smoothingTimeConstant = 0.8; filters[filters.length-1].connect(analyserNode); analyserNode.connect(audioCtx.destination); inputAnalyser = audioCtx.createAnalyser(); inputAnalyser.fftSize = 256; startVisualization(); } function connectSource(node) { if (currentSource) { try { currentSource.disconnect(); } catch(e) {} } currentSource = node; node.connect(inputAnalyser); node.connect(filters[0]); document.getElementById('statusDot').classList.add('live'); } async function startMic() { initAudio(); if (audioCtx.state === 'suspended') await audioCtx.resume(); try { const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } }); connectSource(audioCtx.createMediaStreamSource(stream)); document.getElementById('btnMic').classList.add('active'); document.getElementById('btnFile').classList.remove('active'); document.getElementById('btnMicPedal').classList.add('active'); document.getElementById('btnFilePedal').classList.remove('active'); document.getElementById('fileName').textContent = ''; } catch(e) { alert('Microphone access is needed for live input.'); } } function loadFile(event) { const file = event.target.files[0]; if (!file) return; initAudio(); const reader = new FileReader(); reader.onload = async function(e) { if (audioCtx.state === 'suspended') await audioCtx.resume(); const buffer = await audioCtx.decodeAudioData(e.target.result); if (currentSource && currentSource.stop) { try { currentSource.stop(); } catch(e) {} } const bs = audioCtx.createBufferSource(); bs.buffer = buffer; bs.loop = true; connectSource(bs); bs.start(); document.getElementById('btnFile').classList.add('active'); document.getElementById('btnMic').classList.remove('active'); document.getElementById('btnFilePedal').classList.add('active'); document.getElementById('btnMicPedal').classList.remove('active'); document.getElementById('fileName').textContent = file.name; }; reader.readAsArrayBuffer(file); } function toggleBypass() { bypassed = !bypassed; document.getElementById('btnBypass').classList.toggle('bypassed', bypassed); document.getElementById('btnBypass').textContent = bypassed ? 'Bypassed' : 'Bypass'; document.getElementById('pedalLed').classList.toggle('on', !bypassed); if (bypassed) filters.forEach(f => f.gain.value = 0); else applyState(); } // State management function applyState() { const maxGainDb = 12; BANDS.forEach((band, i) => { let gain = 0; for (const [dim, mult] of Object.entries(band.gainMap)) gain += (semanticState[dim] / 100) * mult * maxGainDb; gain = Math.tanh(gain / maxGainDb) * maxGainDb; if (filters[i]) filters[i].gain.value = gain; }); updateParamTable(); syncStudioSliders(); syncPedalKnobs(); updatePresetHighlight(); updatePedalPresetName(); } function syncStudioSliders() { DIMENSIONS.forEach(dim => { const el = document.getElementById(dim); if (!el) return; el.value = semanticState[dim]; const v = document.getElementById('val-' + dim); if (v) v.textContent = semanticState[dim] > 0 ? '+' + semanticState[dim] : semanticState[dim]; }); } function syncPedalKnobs() { const map = { knobA:'warmth', knobB:'bite', knobC:'air', knobD:'body', knobE:'glass', knobF:'velvet' }; for (const [id, dim] of Object.entries(map)) { const knob = document.getElementById(id); if (!knob) continue; const angle = (semanticState[dim] / 100) * 135; knob.dataset.angle = angle; const ind = knob.querySelector('.knob-indicator'); if (ind) ind.style.transform = `translateX(-50%) rotate(${angle}deg)`; } } function onSlider() { DIMENSIONS.forEach(dim => { semanticState[dim] = parseInt(document.getElementById(dim).value); }); if (!bypassed) applyState(); else { syncStudioSliders(); syncPedalKnobs(); updatePedalPresetName(); } } function applyPreset(name) { const p = PRESETS[name]; if (!p) return; DIMENSIONS.forEach(dim => semanticState[dim] = p[dim]); pedalPresetIndex = PRESET_NAMES.indexOf(name); applyState(); } function cyclePedalPreset(dir) { pedalPresetIndex += dir; if (pedalPresetIndex >= PRESET_NAMES.length) pedalPresetIndex = 0; if (pedalPresetIndex < 0) pedalPresetIndex = PRESET_NAMES.length - 1; applyPreset(PRESET_NAMES[pedalPresetIndex]); } function updatePedalPresetName() { const el = document.getElementById('pedalPresetName'); if (!el) return; for (let i = 0; i < PRESET_NAMES.length; i++) { const p = PRESETS[PRESET_NAMES[i]]; let match = true; for (const dim of DIMENSIONS) { if (Math.abs(semanticState[dim] - p[dim]) > 3) { match = false; break; } } if (match) { pedalPresetIndex = i; el.textContent = PRESET_DISPLAY[PRESET_NAMES[i]]; return; } } pedalPresetIndex = -1; el.textContent = '— custom —'; } function updatePresetHighlight() { document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active')); for (const [name, preset] of Object.entries(PRESETS)) { let match = true; for (const dim of DIMENSIONS) { if (Math.abs(semanticState[dim] - preset[dim]) > 3) { match = false; break; } } if (match) document.querySelector(`.preset-chip[onclick=\"applyPreset('${name}')\"]`)?.classList.add('active'); } } function updateParamTable() { const tbody = document.getElementById('paramBody'); if (!tbody) return; tbody.innerHTML = ''; BANDS.forEach((band, i) => { const gain = filters[i] ? filters[i].gain.value : 0; const tr = document.createElement('tr'); const fs = band.freq >= 1000 ? (band.freq / 1000).toFixed(1) + 'k' : band.freq; tr.innerHTML = `<td>${i+1}</td><td>${band.type}</td><td>${fs}Hz</td><td style=\"color:${gain > 0.1 ? 'var(--accent-gold)' : gain < -0.1 ? 'var(--accent-ice)' : 'var(--text-dim)'}\">${gain > 0 ? '+' : ''}${gain.toFixed(1)} dB</td><td>${band.baseQ}</td>`; tbody.appendChild(tr); }); } // Mode switching function setMode(mode) { currentMode = mode; document.getElementById('modeStudio').classList.toggle('active', mode === 'studio'); document.getElementById('modePedal').classList.toggle('active', mode === 'pedal'); document.getElementById('studioView').classList.toggle('hidden', mode !== 'studio'); document.getElementById('pedalView').classList.toggle('hidden', mode !== 'pedal'); if (mode === 'pedal') initPedalScreen(); window.dispatchEvent(new Event('resize')); } // Knob interaction function initKnobs() {"
+                - generic [ref=e668]:
+                  - img [ref=e672]
+                  - generic [ref=e675]: Done
+          - group "Message actions" [ref=e679]:
+            - button "Copy" [ref=e683] [cursor=pointer]:
+              - generic [ref=e684]:
+                - img [ref=e686]
+                - img [ref=e689]
+        - generic [ref=e693]:
+          - paragraph [ref=e698]: did you get stuck
+          - group "Message actions" [ref=e699]:
+            - generic [ref=e701]:
+              - generic [ref=e702]: Feb 23
+              - button "Copy" [ref=e704] [cursor=pointer]:
+                - generic [ref=e705]:
+                  - img [ref=e707]
+                  - img [ref=e710]
+        - generic [ref=e713]:
+          - generic [ref=e716]:
+            - paragraph [ref=e719]: Hmm, the file got cut off — it's a large single file. Let me break the creation into the final piece.
+            - generic [ref=e721]:
+              - generic [ref=e723]:
+                - button "Clean up partial file" [ref=e724] [cursor=pointer]:
+                  - generic [ref=e725]:
+                    - generic [ref=e726]: Clean up partial file
+                    - img [ref=e729]
+                - status [ref=e731]: Clean up partial file
+                - generic [ref=e732]:
+                  - generic [ref=e739]:
+                    - generic [ref=e740]:
+                      - img [ref=e743]
+                      - button "Clean up partial file" [ref=e748] [cursor=pointer]:
+                        - generic [ref=e750]: Clean up partial file
+                    - button "Script" [ref=e756] [cursor=pointer]:
+                      - generic [ref=e757]: Script
+                  - generic [ref=e767]:
+                    - img [ref=e771]
+                    - generic [ref=e774]: Done
+              - paragraph [ref=e782]: "Let me create it as a complete file in one go via bash to avoid truncation:"
+            - generic [ref=e784]:
+              - generic [ref=e786]:
+                - button "Ran 2 commands, read a file" [ref=e787] [cursor=pointer]:
+                  - generic [ref=e788]:
+                    - generic [ref=e789]: Ran 2 commands, read a file
+                    - img [ref=e792]
+                - status [ref=e794]: Ran 2 commands, read a file
+                - generic [ref=e795]:
+                  - generic [ref=e802]:
+                    - generic [ref=e803]:
+                      - img [ref=e806]
+                      - button "Create complete TONEWORD v2 with studio + pedal mode" [ref=e811] [cursor=pointer]:
+                        - generic [ref=e813]: Create complete TONEWORD v2 with studio + pedal mode
+                    - button "Script" [ref=e819] [cursor=pointer]:
+                      - generic [ref=e820]: Script
+                  - generic [ref=e830]:
+                    - generic [ref=e831]:
+                      - img [ref=e834]
+                      - button "Copy to outputs" [ref=e839] [cursor=pointer]:
+                        - generic [ref=e841]: Copy to outputs
+                    - button "Script" [ref=e847] [cursor=pointer]:
+                      - generic [ref=e848]: Script
+                  - generic [ref=e859]:
+                    - img [ref=e862]
+                    - button "Presented file" [ref=e865]:
+                      - generic [ref=e867]: Presented file
+                  - generic [ref=e877]:
+                    - img [ref=e881]
+                    - generic [ref=e884]: Done
+              - generic [ref=e891]:
+                - paragraph [ref=e892]:
+                  - text: Here it is — hit the
+                  - strong [ref=e893]: Studio / Pedal
+                  - text: toggle at the top to switch between modes.
+                - paragraph [ref=e894]:
+                  - strong [ref=e895]: Pedal mode
+                  - text: "simulates a real hardware enclosure with:"
+                - list [ref=e896]:
+                  - listitem [ref=e897]:
+                    - strong [ref=e898]: Brushed-metal body
+                    - text: with corner screws, slight 3D perspective tilt, and a physical depth shadow — the kind of aesthetic you'd expect from Chase Bliss or Strymon
+                  - listitem [ref=e899]:
+                    - strong [ref=e900]: OLED display
+                    - text: showing a miniaturized EQ curve + live spectrum overlay, plus color-coded per-dimension bar meters with numeric readouts underneath — exactly what you'd fit on a 128×64 or 240×135 pixel screen
+                  - listitem [ref=e901]:
+                    - strong [ref=e902]: Six rotary knobs
+                    - text: (drag up/down to turn) — three large for Warmth/Bite/Air, three small for Body/Glass/Velvet. The indicator lines rotate with color-coded tips matching the studio view
+                  - listitem [ref=e903]:
+                    - strong [ref=e904]: Preset navigation
+                    - text: via ◂/▸ buttons cycling through the tone recipes, with the OLED showing "custom" when you've tweaked off-preset
+                  - listitem [ref=e905]:
+                    - strong [ref=e906]: Footswitch + LED
+                    - text: — click to bypass, LED goes dark, OLED shows "BYPASS" overlay
+                  - listitem [ref=e907]:
+                    - strong [ref=e908]: Input/Output jack labels
+                    - text: for verisimilitude
+                - paragraph [ref=e909]: Everything stays synced — adjust a knob in pedal mode, switch to studio, and the sliders reflect the change (and vice versa). The audio engine is shared.
+                - paragraph [ref=e910]: This gives you a pretty accurate sense of what the physical UX would feel like on an actual digital pedal with an OLED screen and six encoders. The main constraint you'd hit on real hardware is that six knobs is getting towards the upper bound for a standard 125B enclosure — you might want to explore a page/bank system where two knobs cycle through dimensions on a smaller form factor.
+          - group "Message actions" [ref=e911]:
+            - button "Copy" [ref=e915] [cursor=pointer]:
+              - generic [ref=e916]:
+                - img [ref=e918]
+                - img [ref=e921]
+        - generic [ref=e925]:
+          - paragraph [ref=e930]: ok 1) this is INCREDIBLE wowowoowow. 2) can you write a 3 paragraph PITCH.md?
+          - group "Message actions" [ref=e931]:
+            - generic [ref=e933]:
+              - generic [ref=e934]: 9:48 AM
+              - button "Copy" [ref=e936] [cursor=pointer]:
+                - generic [ref=e937]:
+                  - img [ref=e939]
+                  - img [ref=e942]
+        - generic [ref=e945]:
+          - generic [ref=e950]:
+            - generic [ref=e952]:
+              - button "Created a file, read a file" [ref=e953] [cursor=pointer]:
+                - generic [ref=e954]:
+                  - generic [ref=e955]: Created a file, read a file
+                  - img [ref=e958]
+              - status [ref=e960]: Created a file, read a file
+              - generic [ref=e961]:
+                - generic [ref=e968]:
+                  - generic [ref=e969]:
+                    - img [ref=e972]
+                    - button "Write a concise 3-paragraph pitch for TONEWORD" [ref=e975] [cursor=pointer]:
+                      - generic [ref=e977]: Write a concise 3-paragraph pitch for TONEWORD
+                  - button "PITCH.md" [ref=e983] [cursor=pointer]:
+                    - generic [ref=e984]: PITCH.md
+                - generic [ref=e995]:
+                  - img [ref=e998]
+                  - button "Presented file" [ref=e1001]:
+                    - generic [ref=e1003]: Presented file
+                - generic [ref=e1013]:
+                  - img [ref=e1017]
+                  - generic [ref=e1020]: Done
+            - paragraph [ref=e1028]: "Three paragraphs: the problem + how it works, the product strategy + market positioning, and the team + call to action. Attributed to Cosmic Computation Laboratory and pitched at the premium digital pedal tier. Tweak the price point and CTA to taste."
+          - group "Message actions" [ref=e1029]:
+            - button "Copy" [ref=e1033] [cursor=pointer]:
+              - generic [ref=e1034]:
+                - img [ref=e1036]
+                - img [ref=e1039]
+        - generic [ref=e1043]:
+          - generic [ref=e1046]:
+            - generic [ref=e1047]:
+              - paragraph [ref=e1048]: I also want to capture that the motivation for this is that the UIs for EQs kind of suck or are kind of terrible. There are so many different types of EQs, and I think they lead to you EQ-ing with your eyes rather than with your ears, which is one reason that I've moved back from using very, very visual tools like ProQ to EQs that actually have less visual feedback, like analog.
+              - paragraph [ref=e1049]: The simulators, I have, like a Neve channel strip that I use, and I think the nice thing about that is I'm just mixing with my ears rather than being like, "Oh, did I put this thing in the exact right place?" I just want to play around with that concept. I want to invent around that concept of maybe having an EQ with 16,000 individual frequencies that I possibly choose and adjustable cues and stuff like that, which gets in the way of me actually EQ-ing with my ears. This is just a prototype of what that kind of world could look like, and maybe it's the beginning of an ecosystem of other tools for guitarists and for music producers that are like that, just get back to you vibing and just listening a little bit more.
+            - button "Show more" [ref=e1050] [cursor=pointer]
+          - group "Message actions" [ref=e1051]:
+            - generic [ref=e1053]:
+              - generic [ref=e1054]: 9:50 AM
+              - button "Copy" [ref=e1056] [cursor=pointer]:
+                - generic [ref=e1057]:
+                  - img [ref=e1059]
+                  - img [ref=e1062]
+        - generic [ref=e1065]:
+          - generic [ref=e1070]:
+            - generic [ref=e1072]:
+              - button "Created 2 files, ran a command, read a file" [ref=e1073] [cursor=pointer]:
+                - generic [ref=e1074]:
+                  - generic [ref=e1075]: Created 2 files, ran a command, read a file
+                  - img [ref=e1078]
+              - status [ref=e1080]: Created 2 files, ran a command, read a file
+              - generic [ref=e1081]:
+                - generic [ref=e1088]:
+                  - generic [ref=e1089]:
+                    - img [ref=e1092]
+                    - button "Rewrite PITCH.md incorporating the core thesis about EQ UI being broken, eyes vs ears, and the broader ecosystem vision" [ref=e1095] [cursor=pointer]:
+                      - generic [ref=e1097]: Rewrite PITCH.md incorporating the core thesis about EQ UI being broken, eyes vs ears, and the broader ecosystem vision
+                  - button "PITCH.md" [ref=e1103] [cursor=pointer]:
+                    - generic [ref=e1104]: PITCH.md
+                - generic [ref=e1114]:
+                  - generic [ref=e1115]:
+                    - img [ref=e1118]
+                    - button "Remove old pitch to replace" [ref=e1123] [cursor=pointer]:
+                      - generic [ref=e1125]: Remove old pitch to replace
+                  - button "Script" [ref=e1131] [cursor=pointer]:
+                    - generic [ref=e1132]: Script
+                - generic [ref=e1142]:
+                  - generic [ref=e1143]:
+                    - img [ref=e1146]
+                    - button "Rewrite PITCH.md with the eyes-vs-ears thesis and ecosystem vision" [ref=e1149] [cursor=pointer]:
+                      - generic [ref=e1151]: Rewrite PITCH.md with the eyes-vs-ears thesis and ecosystem vision
+                  - button "PITCH.md" [ref=e1157] [cursor=pointer]:
+                    - generic [ref=e1158]: PITCH.md
+                - generic [ref=e1169]:
+                  - img [ref=e1172]
+                  - button "Presented file" [ref=e1175]:
+                    - generic [ref=e1177]: Presented file
+                - generic [ref=e1187]:
+                  - img [ref=e1191]
+                  - generic [ref=e1194]: Done
+            - paragraph [ref=e1202]: The thesis is front and center now — paragraph one is entirely about why EQ UI is broken and the eyes-vs-ears problem, using the Pro-Q → Neve migration as the concrete example. Paragraph three frames TONEWORD as the first piece of a broader "get back to vibing" ecosystem rather than a standalone product. The Neve reference felt important to keep since it's exactly the experience you described — fewer controls, no visual feedback, and somehow you mix better.
+          - group "Message actions" [ref=e1203]:
+            - button "Copy" [ref=e1207] [cursor=pointer]:
+              - generic [ref=e1208]:
+                - img [ref=e1210]
+                - img [ref=e1213]
+        - generic [ref=e1217]:
+          - generic [ref=e1221]:
+            - paragraph [ref=e1222]: Don't do this right now, but I just want to capture my thoughts that the next step for this project is to wrap it in a VST plugin so we can just have it in a door. I think we'd use JUCE.
+            - paragraph [ref=e1223]: The step after that is to figure out how we just get this in a stompbox as soon as possible. What does it look like to have a stompbox that can run arbitrary VST plugins that are cloud-enabled? I know that one other music brand did that this year at NAMM. I can't remember who it was, but yeah, I would love it if you could capture this and also do some research on open source pedal formats that would be suited to digital-first plugin development like this, so we can build a little ecosystem.
+          - group "Message actions" [ref=e1224]:
+            - generic [ref=e1226]:
+              - generic [ref=e1227]: 9:53 AM
+              - button "Copy" [ref=e1229] [cursor=pointer]:
+                - generic [ref=e1230]:
+                  - img [ref=e1232]
+                  - img [ref=e1235]
+        - generic [ref=e1238]:
+          - generic [ref=e1241]:
+            - paragraph [ref=e1244]: Let me capture your roadmap thoughts and research the open-source pedal landscape.
+            - generic [ref=e1246]:
+              - generic [ref=e1248]:
+                - button "Searched the web, used a tool" [ref=e1249] [cursor=pointer]:
+                  - generic [ref=e1250]:
+                    - generic [ref=e1251]: Searched the web, used a tool
+                    - img [ref=e1254]
+                - status [ref=e1256]: Searched the web, used a tool
+                - generic [ref=e1257]:
+                  - generic [ref=e1264]:
+                    - generic [ref=e1265]:
+                      - img [ref=e1268]
+                      - button "Managing memory..." [ref=e1272] [cursor=pointer]:
+                        - generic [ref=e1274]: Managing memory...
+                    - button "Result" [ref=e1280] [cursor=pointer]:
+                      - generic [ref=e1281]: Result
+                  - generic [ref=e1291]:
+                    - generic [ref=e1292]:
+                      - img [ref=e1295]
+                      - button "NAMM 2025 cloud-enabled stompbox VST plugin pedal 10 results" [ref=e1298]:
+                        - generic [ref=e1300]: NAMM 2025 cloud-enabled stompbox VST plugin pedal
+                        - paragraph [ref=e1302]: 10 results
+                    - generic [ref=e1309]:
+                      - generic [ref=e1310] [cursor=pointer]:
+                        - img "favicon" [ref=e1312]
+                        - generic [ref=e1313]: "BOSS Effects Pedals Plugin Gets More Cult Pedals: Update Brings DM-2, OD-2, and DC-2"
+                        - generic [ref=e1314]: www.gearnews.com
+                      - generic [ref=e1315] [cursor=pointer]:
+                        - img "favicon" [ref=e1317]
+                        - generic [ref=e1318]: "NAMM 2025: NEW YEAR, NEW GEAR."
+                        - generic [ref=e1319]: www.jimdunlop.com
+                      - generic [ref=e1320] [cursor=pointer]:
+                        - img "favicon" [ref=e1322]
+                        - generic [ref=e1323]: "NAMM 2025: Guitar Amps and Effects Pedals | GC Riffs"
+                        - generic [ref=e1324]: www.guitarcenter.com
+                      - generic [ref=e1325] [cursor=pointer]:
+                        - img "favicon" [ref=e1327]
+                        - generic [ref=e1328]: NAMM 2025 Pedals - Andertons Music Co.
+                        - generic [ref=e1329]: www.andertons.co.uk
+                      - generic [ref=e1330] [cursor=pointer]:
+                        - img "favicon" [ref=e1332]
+                        - generic [ref=e1333]: "Game-changers, trends, innovations, revivals and show-stoppers: the key guitars, amps and pedals of NAMM 2025 | MusicRadar"
+                        - generic [ref=e1334]: www.musicradar.com
+                      - generic [ref=e1335] [cursor=pointer]:
+                        - img "favicon" [ref=e1337]
+                        - generic [ref=e1338]: VST plugin as pedal?
+                        - generic [ref=e1339]: www.diystompboxes.com
+                      - generic [ref=e1340] [cursor=pointer]:
+                        - img "favicon" [ref=e1342]
+                        - generic [ref=e1343]: NAMM
+                        - generic [ref=e1344]: www.kvraudio.com
+                      - generic [ref=e1345] [cursor=pointer]:
+                        - img "favicon" [ref=e1347]
+                        - generic [ref=e1348]: Stomp box plugins? - Gearspace
+                        - generic [ref=e1349]: gearspace.com
+                      - generic [ref=e1350] [cursor=pointer]:
+                        - img "favicon" [ref=e1352]
+                        - generic [ref=e1353]: "GitHub - mikeoliphant/Stompbox: Guitar amplification and effects pedalboard simulation"
+                        - generic [ref=e1354]: github.com
+                      - generic [ref=e1355] [cursor=pointer]:
+                        - img "favicon" [ref=e1357]
+                        - generic [ref=e1358]: "NAMM 2025 Coverage: In-Depth - Perfect Circuit"
+                        - generic [ref=e1359]: www.perfectcircuit.com
+                  - generic [ref=e1369]:
+                    - generic [ref=e1370]:
+                      - img [ref=e1373]
+                      - button "Polyend Endless text-to-effect stompbox pedal 10 results" [ref=e1376]:
+                        - generic [ref=e1378]: Polyend Endless text-to-effect stompbox pedal
+                        - paragraph [ref=e1380]: 10 results
+                    - generic [ref=e1387]:
+                      - generic [ref=e1388] [cursor=pointer]:
+                        - img "favicon" [ref=e1390]
+                        - generic [ref=e1391]: Polyend Endless User-Defined Stompbox Pedal - Perfect Circuit
+                        - generic [ref=e1392]: www.perfectcircuit.com
+                      - generic [ref=e1393] [cursor=pointer]:
+                        - img "favicon" [ref=e1395]
+                        - generic [ref=e1396]: Polyend Endless User-defined Multi-FX Pedal | Sweetwater
+                        - generic [ref=e1397]: www.sweetwater.com
+                      - generic [ref=e1398] [cursor=pointer]:
+                        - img "favicon" [ref=e1400]
+                        - generic [ref=e1401]: Polyend Endless User-Defined Stompbox Pedal - Andertons Music Co.
+                        - generic [ref=e1402]: www.andertons.co.uk
+                      - generic [ref=e1403] [cursor=pointer]:
+                        - img "favicon" [ref=e1405]
+                        - generic [ref=e1406]: "“Create and share effects that can’t be found in another pedal”: Polyend releases Endless, an open-source pedal that lets guitarists create effects from prompts"
+                        - generic [ref=e1407]: www.guitarworld.com
+                      - generic [ref=e1408] [cursor=pointer]:
+                        - img "favicon" [ref=e1410]
+                        - generic [ref=e1411]: Polyend Endless is a customisable stompbox with a text-to-effect generator that will create any effect you describe - NewsBreak
+                        - generic [ref=e1412]: www.newsbreak.com
+                      - generic [ref=e1413] [cursor=pointer]:
+                        - img "favicon" [ref=e1415]
+                        - generic [ref=e1416]: Polyend releases the Endless, an open-source pedal that lets users create effects from prompts
+                        - generic [ref=e1417]: tech.yahoo.com
+                      - generic [ref=e1418] [cursor=pointer]:
+                        - img "favicon" [ref=e1420]
+                        - generic [ref=e1421]: Polyend Endless is a customisable stompbox with a text-to- ...
+                        - generic [ref=e1422]: www.musicradar.com
+                      - generic [ref=e1423] [cursor=pointer]:
+                        - img "favicon" [ref=e1425]
+                        - generic [ref=e1426]: "Polyend Endless: Prompt Your Favourite FX! - gearnews.com"
+                        - generic [ref=e1427]: www.gearnews.com
+                      - generic [ref=e1428] [cursor=pointer]:
+                        - img "favicon" [ref=e1430]
+                        - generic [ref=e1431]: "MATRIXSYNTH: This is Endless / A User-defined Stompbox by Polyend"
+                        - generic [ref=e1432]: www.matrixsynth.com
+                      - generic [ref=e1433] [cursor=pointer]:
+                        - img "favicon" [ref=e1435]
+                        - generic [ref=e1436]: Introducing Polyend Endless - Announcements - Polyend Backstage
+                        - generic [ref=e1437]: backstage.polyend.com
+                  - generic [ref=e1447]:
+                    - generic [ref=e1448]:
+                      - img [ref=e1451]
+                      - button "open source guitar pedal platform DIY DSP hardware 10 results" [ref=e1454]:
+                        - generic [ref=e1456]: open source guitar pedal platform DIY DSP hardware
+                        - paragraph [ref=e1458]: 10 results
+                    - generic [ref=e1465]:
+                      - generic [ref=e1466] [cursor=pointer]:
+                        - img "favicon" [ref=e1468]
+                        - generic [ref=e1469]: Funbox - Open Source Guitar Pedal Platform, Stereo, Expression, and MIDI - Projects and Examples - Daisy Forums
+                        - generic [ref=e1470]: forum.electro-smith.com
+                      - generic [ref=e1471] [cursor=pointer]:
+                        - img "favicon" [ref=e1473]
+                        - generic [ref=e1474]: pedalSHIELD designed using the open source tool KiCad | Opensource.com
+                        - generic [ref=e1475]: opensource.com
+                      - generic [ref=e1476] [cursor=pointer]:
+                        - img "favicon" [ref=e1478]
+                        - generic [ref=e1479]: Hothouse DIY Digital Signal Processing Platform Kit - Cleveland Music Co.
+                        - generic [ref=e1480]: clevelandmusicco.com
+                      - generic [ref=e1481] [cursor=pointer]:
+                        - img "favicon" [ref=e1483]
+                        - generic [ref=e1484]: "GitHub - andrepxx/go-dsp-guitar: A cross-platform multichannel multi-effects processor for electric guitars and other instruments."
+                        - generic [ref=e1485]: github.com
+                      - generic [ref=e1486] [cursor=pointer]:
+                        - img "favicon" [ref=e1488]
+                        - generic [ref=e1489]: ElectroSmash - pedalSHIELD Arduino Guitar Pedal.
+                        - generic [ref=e1490]: www.electrosmash.com
+                      - generic [ref=e1491] [cursor=pointer]:
+                        - img "favicon" [ref=e1493]
+                        - generic [ref=e1494]: "ElectroSmash - Pedal-Pi: Raspberry Pi ZERO Guitar Pedal"
+                        - generic [ref=e1495]: www.electrosmash.com
+                      - generic [ref=e1496] [cursor=pointer]:
+                        - img "favicon" [ref=e1498]
+                        - generic [ref=e1499]: How to Make a Programmable Guitar Pedal With Arduino | Arduino | Maker Pro
+                        - generic [ref=e1500]: maker.pro
+                      - generic [ref=e1501] [cursor=pointer]:
+                        - img "favicon" [ref=e1503]
+                        - generic [ref=e1504]: "GitHub - NuclearLighthouseStudios/FXDSP: Easily programmable DSP platform in a guitar pedal form factor"
+                        - generic [ref=e1505]: github.com
+                      - generic [ref=e1506] [cursor=pointer]:
+                        - img "favicon" [ref=e1508]
+                        - generic [ref=e1509]: "Rezzonics: DMFX-1: Open Source Digital Multi-Effects guitar pedal (1)"
+                        - generic [ref=e1510]: rezzonics.blogspot.com
+                      - generic [ref=e1511] [cursor=pointer]:
+                        - img "favicon" [ref=e1513]
+                        - generic [ref=e1514]: Pedals
+                        - generic [ref=e1515]: guitarml.com
+                  - generic [ref=e1525]:
+                    - generic [ref=e1526]:
+                      - img [ref=e1529]
+                      - button "Electro-Smith Daisy Seed guitar pedal platform specs 10 results" [ref=e1532]:
+                        - generic [ref=e1534]: Electro-Smith Daisy Seed guitar pedal platform specs
+                        - paragraph [ref=e1536]: 10 results
+                    - generic [ref=e1543]:
+                      - generic [ref=e1544] [cursor=pointer]:
+                        - img "favicon" [ref=e1546]
+                        - generic [ref=e1547]: Daisy Seed – Electrosmith
+                        - generic [ref=e1548]: electro-smith.com
+                      - generic [ref=e1549] [cursor=pointer]:
+                        - img "favicon" [ref=e1551]
+                        - generic [ref=e1552]: Electrosmith – Daisy Seed – Thonk – DIY Synthesizer Kits & Components
+                        - generic [ref=e1553]: www.thonk.co.uk
+                      - generic [ref=e1554] [cursor=pointer]:
+                        - img "favicon" [ref=e1556]
+                        - generic [ref=e1557]: Summary of Daisy Seed Guitar Pedal Hardware Options - Guitar Pedals - Daisy Forums
+                        - generic [ref=e1558]: forum.electro-smith.com
+                      - generic [ref=e1559] [cursor=pointer]:
+                        - img "favicon" [ref=e1561]
+                        - generic [ref=e1562]: Electrosmith Daisy Seed Development Board (Pre Soldered) - 65mb - Elevator Sound
+                        - generic [ref=e1563]: www.elevatorsound.com
+                      - generic [ref=e1564] [cursor=pointer]:
+                        - img "favicon" [ref=e1566]
+                        - generic [ref=e1567]: "Summary of Daisy Seed Guitar Pedal Hardware Options - #3 by keyth72 - Guitar Pedals - Daisy Forums"
+                        - generic [ref=e1568]: forum.electro-smith.com
+                      - generic [ref=e1569] [cursor=pointer]:
+                        - img "favicon" [ref=e1571]
+                        - generic [ref=e1572]: "GitHub - bkshepherd/DaisySeedProjects: A collection of hardware and software projects based around the Electro-Smith Daisy Seed"
+                        - generic [ref=e1573]: github.com
+                      - generic [ref=e1574] [cursor=pointer]:
+                        - img "favicon" [ref=e1576]
+                        - generic [ref=e1577]: "Summary of Daisy Seed Guitar Pedal Hardware Options - #5 by newkular - Guitar Pedals - Daisy Forums"
+                        - generic [ref=e1578]: forum.electro-smith.com
+                      - generic [ref=e1579] [cursor=pointer]:
+                        - img "favicon" [ref=e1581]
+                        - generic [ref=e1582]: "Summary of Daisy Seed Guitar Pedal Hardware Options - #4 by soggybag - Guitar Pedals - Daisy Forums"
+                        - generic [ref=e1583]: forum.electro-smith.com
+                      - generic [ref=e1584] [cursor=pointer]:
+                        - img "favicon" [ref=e1586]
+                        - generic [ref=e1587]: Daisy Petal Programmable Guitar Pedal
+                        - generic [ref=e1588]: www.perfectcircuit.com
+                      - generic [ref=e1589] [cursor=pointer]:
+                        - img "favicon" [ref=e1591]
+                        - generic [ref=e1592]: Daisy – Electrosmith
+                        - generic [ref=e1593]: electro-smith.com
+                  - generic [ref=e1603]:
+                    - generic [ref=e1604]:
+                      - img [ref=e1607]
+                      - button "MOD Devices Dwarf open source guitar pedal LV2 plugin 10 results" [ref=e1610]:
+                        - generic [ref=e1612]: MOD Devices Dwarf open source guitar pedal LV2 plugin
+                        - paragraph [ref=e1614]: 10 results
+                    - generic [ref=e1621]:
+                      - generic [ref=e1622] [cursor=pointer]:
+                        - img "favicon" [ref=e1624]
+                        - generic [ref=e1625]: MOD Dwarf — Modular Audio Processor for Guitar, Synth & Studio - MOD Audio website
+                        - generic [ref=e1626]: mod.audio
+                      - generic [ref=e1627] [cursor=pointer]:
+                        - img "favicon" [ref=e1629]
+                        - generic [ref=e1630]: MOD DWARF | REVIEW - Guitar Interactive Magazine
+                        - generic [ref=e1631]: guitarinteractivemagazine.com
+                      - generic [ref=e1632] [cursor=pointer]:
+                        - img "favicon" [ref=e1634]
+                        - generic [ref=e1635]: "Kickstarter >> MOD Dwarf: The smart, compact and powerful pedal brain by MOD Devices"
+                        - generic [ref=e1636]: www.kickstarter.com
+                      - generic [ref=e1637] [cursor=pointer]:
+                        - img "favicon" [ref=e1639]
+                        - generic [ref=e1640]: The Mod Dwarf promises an entire guitar store's worth of effects in a single pedal
+                        - generic [ref=e1641]: www.engadget.com
+                      - generic [ref=e1642] [cursor=pointer]:
+                        - img "favicon" [ref=e1644]
+                        - generic [ref=e1645]: FAQ - MOD Wiki
+                        - generic [ref=e1646]: wiki.mod.audio
+                      - generic [ref=e1647] [cursor=pointer]:
+                        - img "favicon" [ref=e1649]
+                        - generic [ref=e1650]: MOD DUO - Linux Open Source Expandable Guitar Pedal - Page 2
+                        - generic [ref=e1651]: www.vguitarforums.com
+                      - generic [ref=e1652] [cursor=pointer]:
+                        - img "favicon" [ref=e1654]
+                        - generic [ref=e1655]: Neural Network Guitar Plugins on Pi-Stomp with MODEP | by Keith Bloemer | Medium
+                        - generic [ref=e1656]: keyth72.medium.com
+                      - generic [ref=e1657] [cursor=pointer]:
+                        - img "favicon" [ref=e1659]
+                        - generic [ref=e1660]: MOD Devices Launches Open Source, Arm-Powered MOD Dwarf Pedalboard - Hackster.io
+                        - generic [ref=e1661]: www.hackster.io
+                      - generic [ref=e1662] [cursor=pointer]:
+                        - img "favicon" [ref=e1664]
+                        - generic [ref=e1665]: Home - MOD Audio website
+                        - generic [ref=e1666]: mod.audio
+                      - generic [ref=e1667] [cursor=pointer]:
+                        - img "favicon" [ref=e1669]
+                        - generic [ref=e1670]: MOD Devices Building More LV2 Plugins? (MOD Dwarf) - MODEP - Blokas Community
+                        - generic [ref=e1671]: community.blokas.io
+                  - generic [ref=e1681]:
+                    - img [ref=e1685]
+                    - generic [ref=e1688]: Done
+              - paragraph [ref=e1696]: Good — I now have a thorough picture. Let me capture all of this in a roadmap note for you.
+            - generic [ref=e1698]:
+              - generic [ref=e1700]:
+                - button "Created a file, read a file" [ref=e1701] [cursor=pointer]:
+                  - generic [ref=e1702]:
+                    - generic [ref=e1703]: Created a file, read a file
+                    - img [ref=e1706]
+                - status [ref=e1708]: Created a file, read a file
+                - generic [ref=e1709]:
+                  - generic [ref=e1716]:
+                    - generic [ref=e1717]:
+                      - img [ref=e1720]
+                      - button "Create a roadmap and research notes document capturing next steps for TONEWORD" [ref=e1723] [cursor=pointer]:
+                        - generic [ref=e1725]: Create a roadmap and research notes document capturing next steps for TONEWORD
+                    - button "TONEWORD-ROADMAP.md" [ref=e1731] [cursor=pointer]:
+                      - generic [ref=e1732]: TONEWORD-ROADMAP.md
+                  - generic [ref=e1743]:
+                    - img [ref=e1746]
+                    - button "Presented file" [ref=e1749]:
+                      - generic [ref=e1751]: Presented file
+                  - generic [ref=e1761]:
+                    - img [ref=e1765]
+                    - generic [ref=e1768]: Done
+              - generic [ref=e1775]:
+                - paragraph [ref=e1776]:
+                  - text: All captured. The brand you were thinking of from NAMM was
+                  - strong [ref=e1777]: Polyend Endless
+                  - text: — it just launched at NAMM 2026 last month. It's an open-source stompbox with a C++ SDK and a text-to-effect "Playground" that generates DSP code from natural language descriptions. $299, ARM Cortex-M7 at 720MHz. Very much in the same philosophical neighborhood as TONEWORD, but generic rather than opinionated about interaction design.
+                - paragraph [ref=e1778]:
+                  - text: "The short version of the research: for getting TONEWORD into a physical pedal fastest, the"
+                  - strong [ref=e1779]: Electro-Smith Daisy Seed
+                  - text: ecosystem is the move. There's already an open-source pedal design by bkshepherd that's basically our pedal mode mockup made real — OLED display, 6 knobs, 2 footswitches, relay true bypass, all on a Daisy Seed. The DSP port from our Web Audio BiquadFilters to Daisy's C++ DSP library would be pretty direct. The JUCE plugin comes first though, since that validates the concept with the broadest audience before committing to hardware.
+          - group "Message actions" [ref=e1780]:
+            - button "Copy" [ref=e1784] [cursor=pointer]:
+              - generic [ref=e1785]:
+                - img [ref=e1787]
+                - img [ref=e1790]
+      - link "Start your own conversation" [ref=e1793] [cursor=pointer]:
+        - /url: /project/019c90d8-af1c-72ea-8efe-103a20716afc
+  - region "Notifications (F8)":
+    - status
+  - alert [ref=e1794]
+  - iframe [ref=e1795]:
+    
