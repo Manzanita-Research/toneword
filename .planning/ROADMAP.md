@@ -81,7 +81,13 @@ Plans:
   3. The spectrum analyzer shows pre/post EQ signal in real-time while audio plays
   4. The teaching layer shows the actual frequency, gain, and Q values for all 11 bands, updating as dimensions change
   5. Plugin UI renders sharply on a Retina/HiDPI display with no blur or pixel doubling, and the window is resizable
-**Plans**: TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — LookAndFeel + dimension slider component + 2x3 slider grid
+- [ ] 03-02-PLAN.md — Spectrum analyzer (FFT FIFO) + EQ curve visualization
+- [ ] 03-03-PLAN.md — Teaching panel + editor assembly (replace GenericEditor) + resizable/HiDPI
+- [ ] 03-04-PLAN.md — Visual verification checkpoint
 
 ### Phase 4: Validation and Distribution
 **Goal**: The plugin passes format validation, is code-signed and notarized for macOS, and can be installed by someone who doesn't build it themselves
@@ -103,5 +109,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 0. Web Reference Build | 4/4 | Complete | 2026-02-24 |
 | 1. DSP Engine and Plugin Scaffold | 3/3 | Complete | 2026-02-24 |
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
-| 3. GUI — Studio Mode | 0/TBD | Not started | - |
+| 3. GUI — Studio Mode | 0/4 | Not started | - |
 | 4. Validation and Distribution | 0/TBD | Not started | - |
