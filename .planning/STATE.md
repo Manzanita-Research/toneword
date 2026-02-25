@@ -2,26 +2,25 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-24)
+See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Musicians shape tone with their ears, not their eyes — TONEWORD makes EQ work the way guitarists already think about sound.
-**Current focus:** Gap closure phases — fixing CI/packaging issues and verification docs
+**Current focus:** v1.0 shipped — planning next milestone
 
 ## Current Position
 
-Phase: 5 of 6 (CI and Packaging Fixes)
-Plan: 1 of 1
-Status: Phase 5 complete — packaging resources fixed
-Last activity: 2026-02-25 — Plan 05-01 complete (background.png, toneword.icns, workflow fix)
+Milestone: v1.0 MVP — SHIPPED 2026-02-25
+Status: Complete — all 7 phases, 20 plans, 27/27 requirements verified
+Last activity: 2026-02-25 — v1.0 milestone archived
 
-Progress: [█████████░] 83%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 19
+- Total plans completed: 20
 - Average duration: ~6min
-- Total execution time: ~115min
+- Total execution time: ~120min
 
 **By Phase:**
 
@@ -33,63 +32,25 @@ Progress: [█████████░] 83%
 | 3 | 4/4 | 40min | 10min |
 | 4 | 3/3 | ~11min | ~4min |
 | 5 | 1/1 | 4min | 4min |
-
-*Updated after each plan completion*
+| 6 | 2/2 | 5min | 2.5min |
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- [Pre-Phase 0]: Rebuild HTML prototype as Vite + React + Tailwind in web/ directory
-- [Pre-Phase 0]: Apply /frontend-design (Manzanita design system) during build
-- [Pre-Phase 0]: Preserve all audio processing identically — same gain mappings, same tanh, same presets
-- [Pre-Phase 0]: Fixed colored slider handle bug — use ID selectors, not compound pseudo-element selectors
-- [Pre-Phase 1]: Use Pamplejuce template (JUCE 8, CMake, Catch2) — do not use Projucer
-- [Pre-Phase 1]: Port gainMap weights as constexpr constants; validate against prototype numerically
-- [Pre-Phase 1]: Gain mappings data-driven in BandConfig.h, perceptual match (not exact port)
-- [Pre-Phase 1]: SmoothedValue 20ms linear ramp for zipper-free automation
-- [Pre-Phase 1]: Parameter IDs locked at version 1 (warmth, bite, air, body, glass, velvet)
-- [Pre-Phase 2]: Lock parameter IDs before any public release — append-only after Phase 2 ships
-- [Phase 2]: Bypass via processBlock early-return, not SemanticEQ::setBypassed()
-- [Phase 2]: UndoManager declared before APVTS for correct construction order
-- [Phase 2]: Preset index stored as ValueTree property in state serialization
-- [Phase 2]: Gesture wrapping (begin/setValueNotifyingHost/end) for all preset parameter mutations
-- [Phase 2]: Smooth morph sets 150ms ramp then restores 20ms — current smoothing completes at extended rate
-- [Phase 2]: Presets 5-9 are placeholders to re-tune by ear before release
-- [Phase 2]: Embed GenericAudioProcessorEditor below preset bar for incremental UI development
-- [Phase 2]: Timer-based 5Hz refresh for ComboBox selection and dirty indicator sync
-- [Phase 3]: Header-only SpectrumData in DSP/ for lock-free audio-to-GUI data flow
-- [Phase 3]: EQCurvePanel recomputes response from APVTS values on GUI thread (no audio-thread state reads)
-- [Phase 3]: Shared GUIHelpers::freqToX for consistent log-frequency mapping across viz panels
-- [Phase 3]: Temporal smoothing 0.8/0.2 decay for spectrum analyzer stability
-- [Phase 3]: Dimension colors as static constexpr array indexed by Dimension enum
-- [Phase 3]: Float coordinates throughout LookAndFeel for HiDPI correctness
-- [Phase 3]: TeachingPanel timer at 10Hz (text updates don't need 30Hz)
-- [Phase 3]: LookAndFeel cleared in destructor before child components destroyed (pitfall #4)
-- [Phase 3]: Proportional layout: 18% spectrum, 15% EQ curve, 35% sliders, remainder teaching
-- [Phase 4]: All CI/CD steps in single workflow file (build_and_test.yml)
-- [Phase 4]: Signing/notarization conditional on secrets — graceful degradation without Apple Developer account
-- [Phase 4]: auval requires sudo cp to /Library/Audio/Plug-Ins/Components/ for CI discovery
-- [Phase 4]: Removed CLAP from distribution template (TONEWORD ships VST3, AU, Standalone only)
-- [Phase 4]: GitHub Release on version tags (v*) via softprops/action-gh-release
-- [Phase 5]: Kept action versions @v6/@v7 — audit incorrectly flagged these as non-existent, research confirmed they're latest stable
-- [Phase 5]: Gradient background.png (terracotta to sage/cream) as brand placeholder for installer
-- [Phase 5]: Kept pamplejuce.icns alongside toneword.icns — full Pamplejuce cleanup deferred
+All v1.0 decisions logged in PROJECT.md Key Decisions table.
+- [quick-1] Always open audio settings on mic connect to force input device confirmation
 
 ### Pending Todos
 
-None — all phases complete.
+None — v1.0 complete.
 
 ### Blockers/Concerns
 
-- [Phase 4 open]: Apple Developer Program enrollment ($99/yr) needed for code signing and notarization. CI pipeline works without it (uploads unsigned artifacts). Add secrets when account is ready.
-- [Phase 1 resolved]: Filter gain unit mismatch — addressed with dB-to-linear conversion test (passing)
+- [Open]: Apple Developer Program enrollment ($99/yr) needed for code signing and notarization. CI pipeline works without it (uploads unsigned artifacts).
 
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Phase 5 complete — CI and packaging fixes done
-Resume file: .planning/phases/05-ci-and-packaging-fixes/05-01-SUMMARY.md
+Stopped at: Completed quick task 1 (redesign source selection UX)
+Next step: `/gsd:new-milestone` for v1.1 planning

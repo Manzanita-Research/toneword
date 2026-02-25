@@ -17,6 +17,7 @@ function App() {
   const [selectedDeviceId, setSelectedDeviceId] = useState(() =>
     localStorage.getItem('toneword:inputDeviceId') || ''
   );
+  const [pendingConnect, setPendingConnect] = useState(false);
 
   const engine = useAudioEngine();
   const { state, setDimension, loadPreset, resetAll } = useSemanticState();
@@ -44,24 +45,38 @@ function App() {
   const handleDeviceChange = useCallback((deviceId: string) => {
     setSelectedDeviceId(deviceId);
     localStorage.setItem('toneword:inputDeviceId', deviceId);
-    // If mic is already active, reconnect with the new device
     if (source === 'mic') {
+      // Already active — reconnect with the new device
       engine.connectMic(deviceId).catch(() => {});
+    } else if (pendingConnect) {
+      // User clicked Guitar In but had no device — now they picked one, auto-connect
+      engine.connectMic(deviceId).then(() => {
+        setSource('mic');
+      }).catch(() => {});
+      setPendingConnect(false);
     }
-  }, [engine, source]);
+  }, [engine, source, pendingConnect]);
 
   const handleMic = useCallback(async () => {
     if (source === 'mic') {
       engine.disconnectSource();
       setSource('');
+      setPendingConnect(false);
+      return;
+    }
+    // No device selected yet — open settings so user picks one first
+    if (!selectedDeviceId) {
+      setPendingConnect(true);
+      setSettingsOpen(true);
       return;
     }
     try {
-      await engine.connectMic(selectedDeviceId || undefined);
+      await engine.connectMic(selectedDeviceId);
       setSource('mic');
       setSettingsOpen(true);
     } catch {
-      alert('Microphone access needed.');
+      // Permission denied or device unavailable — open settings to retry
+      setSettingsOpen(true);
     }
   }, [engine, selectedDeviceId, source]);
 
