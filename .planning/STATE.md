@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** Musicians shape tone with their ears, not their eyes — TONEWORD makes EQ work the way guitarists already think about sound.
-**Current focus:** All phases complete — TONEWORD v1 ready for release
+**Current focus:** Gap closure phases — fixing CI/packaging issues and verification docs
 
 ## Current Position
 
-Phase: 4 of 4 (Validation and Distribution)
-Plan: 3 of 3
-Status: Phase 4 complete — all phases done
-Last activity: 2026-02-25 — Plan 04-03 complete (CI workflow validated and approved)
+Phase: 5 of 6 (CI and Packaging Fixes)
+Plan: 1 of 1
+Status: Phase 5 complete — packaging resources fixed
+Last activity: 2026-02-25 — Plan 05-01 complete (background.png, toneword.icns, workflow fix)
 
-Progress: [██████████] 100%
+Progress: [█████████░] 83%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 18
-- Average duration: ~7min
-- Total execution time: ~111min
+- Total plans completed: 19
+- Average duration: ~6min
+- Total execution time: ~115min
 
 **By Phase:**
 
@@ -32,6 +32,7 @@ Progress: [██████████] 100%
 | 2 | 3/3 | 17min | 6min |
 | 3 | 4/4 | 40min | 10min |
 | 4 | 3/3 | ~11min | ~4min |
+| 5 | 1/1 | 4min | 4min |
 
 *Updated after each plan completion*
 
@@ -74,6 +75,9 @@ Recent decisions affecting current work:
 - [Phase 4]: auval requires sudo cp to /Library/Audio/Plug-Ins/Components/ for CI discovery
 - [Phase 4]: Removed CLAP from distribution template (TONEWORD ships VST3, AU, Standalone only)
 - [Phase 4]: GitHub Release on version tags (v*) via softprops/action-gh-release
+- [Phase 5]: Kept action versions @v6/@v7 — audit incorrectly flagged these as non-existent, research confirmed they're latest stable
+- [Phase 5]: Gradient background.png (terracotta to sage/cream) as brand placeholder for installer
+- [Phase 5]: Kept pamplejuce.icns alongside toneword.icns — full Pamplejuce cleanup deferred
 
 ### Pending Todos
 
@@ -87,5 +91,5 @@ None — all phases complete.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: All phases complete — TONEWORD v1 roadmap finished
-Resume file: .planning/phases/04-validation-and-distribution/04-03-SUMMARY.md
+Stopped at: Phase 5 complete — CI and packaging fixes done
+Resume file: .planning/phases/05-ci-and-packaging-fixes/05-01-SUMMARY.md
