@@ -1,4 +1,5 @@
 #include "PluginProcessor.h"
+#include "PluginEditor.h"
 
 TonewordAudioProcessor::TonewordAudioProcessor()
     : AudioProcessor (BusesProperties()
@@ -158,7 +159,7 @@ bool TonewordAudioProcessor::hasEditor() const { return true; }
 
 juce::AudioProcessorEditor* TonewordAudioProcessor::createEditor()
 {
-    return new juce::GenericAudioProcessorEditor (*this);
+    return new TonewordAudioProcessorEditor (*this);
 }
 
 void TonewordAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
