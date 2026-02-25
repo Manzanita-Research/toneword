@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAudioEngine } from './hooks/useAudioEngine';
 import { useSemanticState } from './hooks/useSemanticState';
+import { useMidi } from './hooks/useMidi';
 import { ModeToggle } from './components/ModeToggle';
 import { SourceBar } from './components/SourceBar';
+import { InputSettings } from './components/InputSettings';
 import { StudioMode } from './components/StudioMode';
 import { PedalMode } from './components/PedalMode';
 import type { Dimension, Preset } from './audio/types';
@@ -11,9 +13,26 @@ function App() {
   const [mode, setMode] = useState<'studio' | 'pedal'>('studio');
   const [source, setSource] = useState('');
   const [bypassed, setBypassed] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [selectedDeviceId, setSelectedDeviceId] = useState(() =>
+    localStorage.getItem('toneword:inputDeviceId') || ''
+  );
 
   const engine = useAudioEngine();
   const { state, setDimension, loadPreset, resetAll } = useSemanticState();
+
+  const handleBypassToggle = useCallback(() => {
+    setBypassed((prev) => {
+      const next = !prev;
+      engine.toggleBypass(next);
+      if (!next) {
+        engine.applyState(state);
+      }
+      return next;
+    });
+  }, [engine, state]);
+
+  const midi = useMidi(handleBypassToggle);
 
   // Apply state to audio engine whenever semantic state changes
   useEffect(() => {
@@ -22,14 +41,23 @@ function App() {
     }
   }, [state, bypassed, engine]);
 
+  const handleDeviceChange = useCallback((deviceId: string) => {
+    setSelectedDeviceId(deviceId);
+    localStorage.setItem('toneword:inputDeviceId', deviceId);
+    // If mic is already active, reconnect with the new device
+    if (source === 'mic') {
+      engine.connectMic(deviceId).catch(() => {});
+    }
+  }, [engine, source]);
+
   const handleMic = useCallback(async () => {
     try {
-      await engine.connectMic();
+      await engine.connectMic(selectedDeviceId || undefined);
       setSource('mic');
     } catch {
       alert('Microphone access needed.');
     }
-  }, [engine]);
+  }, [engine, selectedDeviceId]);
 
   const handleFile = useCallback(async (file: File) => {
     try {
@@ -39,15 +67,6 @@ function App() {
       console.error('Failed to load audio file:', err);
     }
   }, [engine]);
-
-  const handleBypassToggle = useCallback(() => {
-    const next = !bypassed;
-    setBypassed(next);
-    engine.toggleBypass(next);
-    if (!next) {
-      engine.applyState(state);
-    }
-  }, [bypassed, engine, state]);
 
   const handleDimensionChange = useCallback((dim: Dimension, value: number) => {
     setDimension(dim, value);
@@ -86,6 +105,8 @@ function App() {
             bypassed={bypassed}
             onBypassToggle={handleBypassToggle}
             inputAnalyserRef={engine.inputAnalyserRef}
+            onSettingsOpen={() => setSettingsOpen(true)}
+            hasDeviceSelected={!!selectedDeviceId}
           />
 
           <StudioMode
@@ -110,12 +131,29 @@ function App() {
           />
 
           <div className="flex gap-2 mt-5 items-center">
-            <button
-              className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-terracotta hover:text-terracotta transition-all"
-              onClick={handleMic}
-            >
-              Guitar In
-            </button>
+            <div className="flex items-center">
+              <button
+                className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-r-0 border-border text-text rounded-l-md cursor-pointer hover:border-terracotta hover:text-terracotta transition-all"
+                onClick={handleMic}
+              >
+                Guitar In
+              </button>
+              <button
+                className={`font-mono text-[10px] px-1.5 py-1.5 bg-surface-2 border rounded-r-md cursor-pointer transition-all ${
+                  selectedDeviceId
+                    ? 'border-terracotta/50 text-terracotta hover:bg-terracotta/10'
+                    : 'border-border text-text-dim hover:border-terracotta hover:text-terracotta'
+                }`}
+                onClick={() => setSettingsOpen(true)}
+                aria-label="Audio input settings"
+                title="Choose input device"
+              >
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="8" cy="8" r="2.5" />
+                  <path d="M8 1.5v1.2M8 13.3v1.2M1.5 8h1.2M13.3 8h1.2M3.4 3.4l.85.85M11.75 11.75l.85.85M3.4 12.6l.85-.85M11.75 4.25l.85-.85" />
+                </svg>
+              </button>
+            </div>
             <button
               className="font-mono text-[10px] px-3 py-1.5 bg-surface-2 border border-border text-text rounded-md cursor-pointer hover:border-terracotta hover:text-terracotta transition-all"
               onClick={() => {
@@ -139,6 +177,18 @@ function App() {
           </div>
         </div>
       )}
+
+      <InputSettings
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        selectedDeviceId={selectedDeviceId}
+        onDeviceChange={handleDeviceChange}
+        midiConfig={midi.config}
+        onMidiConfigChange={midi.updateConfig}
+        midiAvailable={midi.midiAvailable}
+        midiPorts={midi.midiPorts}
+        lastMidiMessage={midi.lastMessage}
+      />
     </>
   );
 }

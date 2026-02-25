@@ -29,14 +29,14 @@ export function Knob({ value, color, label, onChange, small = false }: KnobProps
     startRef.current = null;
   };
 
-  const size = small ? 'w-[34px] h-[34px]' : 'w-[50px] h-[50px]';
+  const size = small ? 'w-[44px] h-[44px]' : 'w-[62px] h-[62px]';
   const indicatorStyle = small
-    ? { top: '4px', height: '9px' }
-    : { top: '6px', height: '13px' };
+    ? { top: '5px', height: '12px' }
+    : { top: '7px', height: '16px' };
 
   return (
     <div className="flex flex-col items-center gap-1.5">
-      <div className="text-[7px] tracking-[0.15em] uppercase text-white/35 text-center">
+      <div className="text-[8px] tracking-[0.15em] uppercase text-white/35 text-center">
         {label}
       </div>
       <div

@@ -7,9 +7,11 @@ interface SourceBarProps {
   bypassed: boolean;
   onBypassToggle: () => void;
   inputAnalyserRef: React.RefObject<AnalyserNode | null>;
+  onSettingsOpen: () => void;
+  hasDeviceSelected: boolean;
 }
 
-export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: SourceBarProps) {
+export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onSettingsOpen, hasDeviceSelected }: SourceBarProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,16 +30,33 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle }: S
         Source
       </label>
 
-      <button
-        className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
-          source === 'mic'
-            ? 'bg-terracotta text-bg border-terracotta'
-            : 'bg-surface-2 border-border text-text hover:border-terracotta hover:text-terracotta'
-        }`}
-        onClick={onMic}
-      >
-        Mic / Guitar In
-      </button>
+      <div className="flex items-center gap-1">
+        <button
+          className={`font-mono text-xs px-4 py-2 rounded-l-md border border-r-0 transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
+            source === 'mic'
+              ? 'bg-terracotta text-bg border-terracotta'
+              : 'bg-surface-2 border-border text-text hover:border-terracotta hover:text-terracotta'
+          }`}
+          onClick={onMic}
+        >
+          Mic / Guitar In
+        </button>
+        <button
+          className={`font-mono text-xs px-2 py-2 rounded-r-md border transition-all duration-300 ease-out cursor-pointer ${
+            hasDeviceSelected
+              ? 'bg-surface-2 border-terracotta/50 text-terracotta hover:bg-terracotta/10'
+              : 'bg-surface-2 border-border text-text-dim hover:border-terracotta hover:text-terracotta'
+          }`}
+          onClick={onSettingsOpen}
+          aria-label="Audio input settings"
+          title="Choose input device"
+        >
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="8" cy="8" r="2.5" />
+            <path d="M8 1.5v1.2M8 13.3v1.2M1.5 8h1.2M13.3 8h1.2M3.4 3.4l.85.85M11.75 11.75l.85.85M3.4 12.6l.85-.85M11.75 4.25l.85-.85" />
+          </svg>
+        </button>
+      </div>
 
       <button
         className={`font-mono text-xs px-4 py-2 rounded-md border transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${

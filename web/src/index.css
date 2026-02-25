@@ -23,7 +23,7 @@
   --color-velvet: #8a5ab8;
 
   /* Typography — Whole Earth Catalog meets Laurel Canyon */
-  --font-display: 'Fraunces', serif;
+  --font-display: 'New Spirit', 'Fraunces', serif;
   --font-body: 'Source Serif 4', serif;
   --font-mono: 'Geist Mono', monospace;
 }

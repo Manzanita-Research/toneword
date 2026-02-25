@@ -61,12 +61,12 @@ export function PedalMode({
     <div className="flex flex-col items-center justify-center" style={{ perspective: '900px' }}>
       {/* Pedal enclosure */}
       <div
-        className="w-[280px] h-[530px] rounded-2xl relative flex flex-col items-center overflow-hidden"
+        className="w-[340px] h-[640px] rounded-2xl relative flex flex-col items-center overflow-hidden"
         style={{
           background: 'linear-gradient(175deg, #252320 0%, #1a1816 40%, #141210 100%)',
           boxShadow: '0 2px 0 0 #3a3835, 0 4px 0 0 #2a2827, 0 20px 60px rgba(107, 58, 42, 0.15), inset 0 1px 0 rgba(255,255,255,0.06)',
           transform: 'rotateX(4deg)',
-          padding: '20px 20px 24px',
+          padding: '24px 24px 28px',
         }}
       >
         {/* Brushed metal texture */}
@@ -103,12 +103,12 @@ export function PedalMode({
 
         {/* Brand */}
         <div
-          className="font-display text-lg tracking-[-0.01em] text-white/50 mb-0.5 text-center z-[2]"
-          style={{ fontVariationSettings: "'WONK' 1, 'opsz' 18" }}
+          className="font-display text-xl tracking-[-0.01em] text-white/50 mb-0.5 text-center z-[2]"
+          style={{ fontVariationSettings: "'WONK' 1, 'opsz' 20" }}
         >
           TONE<em className="text-body/70 italic">WORD</em>
         </div>
-        <div className="font-body text-[8px] tracking-[0.2em] uppercase text-text-dim/40 mb-3.5 z-[2]">
+        <div className="font-body text-[9px] tracking-[0.2em] uppercase text-text-dim/40 mb-4 z-[2]">
           Semantic EQ
         </div>
 
@@ -122,7 +122,7 @@ export function PedalMode({
         />
 
         {/* Top row knobs (large) */}
-        <div className="flex gap-3.5 mb-2.5 z-[2] w-full justify-center">
+        <div className="flex gap-5 mb-3 z-[2] w-full justify-center">
           {TOP_ROW.map((dim) => (
             <Knob
               key={dim}
@@ -135,7 +135,7 @@ export function PedalMode({
         </div>
 
         {/* Bottom row knobs (small) */}
-        <div className="flex gap-3.5 mb-2.5 z-[2] w-full justify-center">
+        <div className="flex gap-5 mb-3 z-[2] w-full justify-center">
           {BOTTOM_ROW.map((dim) => (
             <Knob
               key={dim}
@@ -160,7 +160,7 @@ export function PedalMode({
       </div>
 
       {/* Jacks */}
-      <div className="flex justify-between w-[280px] px-[30px] mt-1.5">
+      <div className="flex justify-between w-[340px] px-[36px] mt-1.5">
         <span className="text-[7px] tracking-[0.1em] uppercase text-text-dim/30">&larr; Input</span>
         <span className="text-[7px] tracking-[0.1em] uppercase text-text-dim/30">Output &rarr;</span>
       </div>

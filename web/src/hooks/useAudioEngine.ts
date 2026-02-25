@@ -46,7 +46,7 @@ export function useAudioEngine() {
     }
   }, []);
 
-  const connectMic = useCallback(async () => {
+  const connectMic = useCallback(async (deviceId?: string) => {
     initAudio();
     const ctx = ctxRef.current!;
     if (ctx.state === 'suspended') await ctx.resume();
@@ -56,6 +56,7 @@ export function useAudioEngine() {
         echoCancellation: false,
         noiseSuppression: false,
         autoGainControl: false,
+        ...(deviceId ? { deviceId: { exact: deviceId } } : {}),
       },
     });
     const source = ctx.createMediaStreamSource(stream);

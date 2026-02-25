@@ -194,7 +194,7 @@ export function OledDisplay({ state, presetName, bypassed, analyserRef, filtersR
 
   return (
     <div
-      className="w-[236px] h-[140px] rounded relative mb-4 z-[2] overflow-hidden"
+      className="w-[288px] h-[170px] rounded relative mb-5 z-[2] overflow-hidden"
       style={{
         background: '#000',
         boxShadow: 'inset 0 0 12px #000, 0 0.5px 0 rgba(255,255,255,0.05)',
