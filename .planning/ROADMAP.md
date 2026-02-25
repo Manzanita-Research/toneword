@@ -115,7 +115,10 @@ Plans:
   1. GitHub Actions workflow uses valid action versions (@v4) and parses without errors
   2. `background.png` exists in packaging resources OR is removed from distribution.xml.template
   3. CI workflow can be pushed and run without immediate failures
-**Plans:** TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — Fix missing background.png, rename pamplejuce.icns to toneword.icns, update workflow reference
 
 ### Phase 6: Retroactive Verification Documentation
 **Goal**: Create formal VERIFICATION.md artifacts for Phase 1 and Phase 4, and update all requirement checkboxes in REQUIREMENTS.md to reflect actual completion status
@@ -141,5 +144,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
 | 3. GUI — Studio Mode | 4/4 | Complete | 2026-02-24 |
 | 4. Validation and Distribution | 3/3 | Complete | 2026-02-25 |
-| 5. CI and Packaging Fixes | 0/? | Pending | — |
+| 5. CI and Packaging Fixes | 0/1 | Planned | — |
 | 6. Retroactive Verification Docs | 0/? | Pending | — |
