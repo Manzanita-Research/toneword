@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 0: Web Reference Build** - Rebuild single-file HTML prototype as a Vite app with proper structure and Manzanita frontend design (completed 2026-02-24)
 - [x] **Phase 1: DSP Engine and Plugin Scaffold** - JUCE project + working audio processing, no GUI required (completed 2026-02-24)
-- [ ] **Phase 2: State, Presets, and Parameter Model** - DAW save/recall, factory presets, stable parameter IDs
+- [x] **Phase 2: State, Presets, and Parameter Model** - DAW save/recall, factory presets, stable parameter IDs (completed 2026-02-25)
 - [ ] **Phase 3: GUI — Studio Mode** - Full visual interface: controls, EQ curve, spectrum analyzer, teaching layer
 - [ ] **Phase 4: Validation and Distribution** - pluginval CI, macOS code signing, notarized release package
 
@@ -67,9 +67,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Add bypass + snap/smooth parameters, wire UndoManager, update state serialization
-- [ ] 02-02-PLAN.md — Factory presets (9 total), PresetManager, program interface for DAW preset browsers
-- [ ] 02-03-PLAN.md — Preset browser UI (ComboBox + arrows + dirty indicator) + DAW verification
+- [x] 02-01-PLAN.md — Add bypass + snap/smooth parameters, wire UndoManager, update state serialization
+- [x] 02-02-PLAN.md — Factory presets (9 total), PresetManager, program interface for DAW preset browsers
+- [x] 02-03-PLAN.md — Preset browser UI (ComboBox + arrows + dirty indicator) + DAW verification
 
 ### Phase 3: GUI — Studio Mode
 **Goal**: The full visual interface is built: six labeled dimension controls, a composite EQ curve, a real-time spectrum analyzer, and the teaching layer showing actual parametric values — all rendering sharply on Retina displays
@@ -102,6 +102,6 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 0. Web Reference Build | 4/4 | Complete | 2026-02-24 |
 | 1. DSP Engine and Plugin Scaffold | 3/3 | Complete | 2026-02-24 |
-| 2. State, Presets, and Parameter Model | 0/TBD | Not started | - |
+| 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
 | 3. GUI — Studio Mode | 0/TBD | Not started | - |
 | 4. Validation and Distribution | 0/TBD | Not started | - |
