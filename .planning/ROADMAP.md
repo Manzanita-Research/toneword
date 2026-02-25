@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 0: Web Reference Build** - Rebuild single-file HTML prototype as a Vite app with proper structure and Manzanita frontend design (completed 2026-02-24)
 - [x] **Phase 1: DSP Engine and Plugin Scaffold** - JUCE project + working audio processing, no GUI required (completed 2026-02-24)
 - [x] **Phase 2: State, Presets, and Parameter Model** - DAW save/recall, factory presets, stable parameter IDs (completed 2026-02-25)
-- [ ] **Phase 3: GUI — Studio Mode** - Full visual interface: controls, EQ curve, spectrum analyzer, teaching layer
+- [x] **Phase 3: GUI — Studio Mode** - Full visual interface: controls, EQ curve, spectrum analyzer, teaching layer (completed 2026-02-24)
 - [ ] **Phase 4: Validation and Distribution** - pluginval CI, macOS code signing, notarized release package
 
 ## Phase Details
@@ -81,13 +81,13 @@ Plans:
   3. The spectrum analyzer shows pre/post EQ signal in real-time while audio plays
   4. The teaching layer shows the actual frequency, gain, and Q values for all 11 bands, updating as dimensions change
   5. Plugin UI renders sharply on a Retina/HiDPI display with no blur or pixel doubling, and the window is resizable
-**Plans:** 2/4 plans executed
+**Plans:** 4/4 plans executed
 
 Plans:
 - [x] 03-01-PLAN.md — LookAndFeel + dimension slider component + 2x3 slider grid
 - [x] 03-02-PLAN.md — Spectrum analyzer (FFT FIFO) + EQ curve visualization
-- [ ] 03-03-PLAN.md — Teaching panel + editor assembly (replace GenericEditor) + resizable/HiDPI
-- [ ] 03-04-PLAN.md — Visual verification checkpoint
+- [x] 03-03-PLAN.md — Teaching panel + editor assembly (replace GenericEditor) + resizable/HiDPI
+- [x] 03-04-PLAN.md — Visual verification checkpoint
 
 ### Phase 4: Validation and Distribution
 **Goal**: The plugin passes format validation, is code-signed and notarized for macOS, and can be installed by someone who doesn't build it themselves
@@ -109,5 +109,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 0. Web Reference Build | 4/4 | Complete | 2026-02-24 |
 | 1. DSP Engine and Plugin Scaffold | 3/3 | Complete | 2026-02-24 |
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
-| 3. GUI — Studio Mode | 2/4 | In Progress|  |
+| 3. GUI — Studio Mode | 4/4 | Complete | 2026-02-24 |
 | 4. Validation and Distribution | 0/TBD | Not started | - |
