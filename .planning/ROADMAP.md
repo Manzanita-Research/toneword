@@ -97,7 +97,12 @@ Plans:
   1. pluginval runs against both VST3 and AU builds in CI and reports zero errors
   2. A colleague on a different Mac can install the plugin and open it in Logic without a Gatekeeper warning
   3. The AU build passes `auval` without errors
-**Plans**: TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — CI workflow: build, test, pluginval (VST3 + AU), auval, artifact upload
+- [ ] 04-02-PLAN.md — Code signing, notarization, .pkg packaging, GitHub Release
+- [ ] 04-03-PLAN.md — Workflow validation and human review checkpoint
 
 ## Progress
 
