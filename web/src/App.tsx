@@ -51,13 +51,19 @@ function App() {
   }, [engine, source]);
 
   const handleMic = useCallback(async () => {
+    if (source === 'mic') {
+      engine.disconnectSource();
+      setSource('');
+      return;
+    }
     try {
       await engine.connectMic(selectedDeviceId || undefined);
       setSource('mic');
+      setSettingsOpen(true);
     } catch {
       alert('Microphone access needed.');
     }
-  }, [engine, selectedDeviceId]);
+  }, [engine, selectedDeviceId, source]);
 
   const handleFile = useCallback(async (file: File) => {
     try {

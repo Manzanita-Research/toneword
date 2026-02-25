@@ -30,7 +30,7 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onS
         Source
       </label>
 
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-0">
         <button
           className={`font-mono text-xs px-4 py-2 rounded-l-md border border-r-0 transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
             source === 'mic'
@@ -39,7 +39,7 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onS
           }`}
           onClick={onMic}
         >
-          Mic / Guitar In
+          Guitar In
         </button>
         <button
           className={`font-mono text-xs px-2 py-2 rounded-r-md border transition-all duration-300 ease-out cursor-pointer ${
