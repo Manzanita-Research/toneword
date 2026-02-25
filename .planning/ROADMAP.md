@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: DSP Engine and Plugin Scaffold** - JUCE project + working audio processing, no GUI required (completed 2026-02-24)
 - [x] **Phase 2: State, Presets, and Parameter Model** - DAW save/recall, factory presets, stable parameter IDs (completed 2026-02-25)
 - [x] **Phase 3: GUI — Studio Mode** - Full visual interface: controls, EQ curve, spectrum analyzer, teaching layer (completed 2026-02-24)
-- [ ] **Phase 4: Validation and Distribution** - pluginval CI, macOS code signing, notarized release package
+- [x] **Phase 4: Validation and Distribution** - pluginval CI, macOS code signing, notarized release package (completed 2026-02-25)
 
 ## Phase Details
 
@@ -100,9 +100,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — CI workflow: build, test, pluginval (VST3 + AU), auval, artifact upload
-- [ ] 04-02-PLAN.md — Code signing, notarization, .pkg packaging, GitHub Release
-- [ ] 04-03-PLAN.md — Workflow validation and human review checkpoint
+- [x] 04-01-PLAN.md — CI workflow: build, test, pluginval (VST3 + AU), auval, artifact upload
+- [x] 04-02-PLAN.md — Code signing, notarization, .pkg packaging, GitHub Release
+- [x] 04-03-PLAN.md — Workflow validation and human review checkpoint
 
 ## Progress
 
@@ -115,4 +115,4 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 1. DSP Engine and Plugin Scaffold | 3/3 | Complete | 2026-02-24 |
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
 | 3. GUI — Studio Mode | 4/4 | Complete | 2026-02-24 |
-| 4. Validation and Distribution | 0/TBD | Not started | - |
+| 4. Validation and Distribution | 3/3 | Complete | 2026-02-25 |

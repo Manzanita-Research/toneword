@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** Musicians shape tone with their ears, not their eyes — TONEWORD makes EQ work the way guitarists already think about sound.
-**Current focus:** Phase 3 complete — ready for Phase 4 (Validation and Distribution)
+**Current focus:** All phases complete — TONEWORD v1 ready for release
 
 ## Current Position
 
-Phase: 3 of 4 (GUI — Studio Mode)
-Plan: 4 of 4
-Status: Phase 3 complete (visual verification approved)
-Last activity: 2026-02-24 — Plan 03-04 complete (visual verification checkpoint auto-approved)
+Phase: 4 of 4 (Validation and Distribution)
+Plan: 3 of 3
+Status: Phase 4 complete — all phases done
+Last activity: 2026-02-25 — Plan 04-03 complete (CI workflow validated and approved)
 
-Progress: [█████████░] 94%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
+- Total plans completed: 18
 - Average duration: ~7min
-- Total execution time: ~100min
+- Total execution time: ~111min
 
 **By Phase:**
 
@@ -31,6 +31,7 @@ Progress: [█████████░] 94%
 | 1 | 3/3 | ~15min | ~5min |
 | 2 | 3/3 | 17min | 6min |
 | 3 | 4/4 | 40min | 10min |
+| 4 | 3/3 | ~11min | ~4min |
 
 *Updated after each plan completion*
 
@@ -68,18 +69,23 @@ Recent decisions affecting current work:
 - [Phase 3]: TeachingPanel timer at 10Hz (text updates don't need 30Hz)
 - [Phase 3]: LookAndFeel cleared in destructor before child components destroyed (pitfall #4)
 - [Phase 3]: Proportional layout: 18% spectrum, 15% EQ curve, 35% sliders, remainder teaching
+- [Phase 4]: All CI/CD steps in single workflow file (build_and_test.yml)
+- [Phase 4]: Signing/notarization conditional on secrets — graceful degradation without Apple Developer account
+- [Phase 4]: auval requires sudo cp to /Library/Audio/Plug-Ins/Components/ for CI discovery
+- [Phase 4]: Removed CLAP from distribution template (TONEWORD ships VST3, AU, Standalone only)
+- [Phase 4]: GitHub Release on version tags (v*) via softprops/action-gh-release
 
 ### Pending Todos
 
-None yet.
+None — all phases complete.
 
 ### Blockers/Concerns
 
-- [Phase 4 prereq]: Apple Developer Program enrollment ($99/yr) needed for macOS notarization — confirm before Phase 4 planning
+- [Phase 4 open]: Apple Developer Program enrollment ($99/yr) needed for code signing and notarization. CI pipeline works without it (uploads unsigned artifacts). Add secrets when account is ready.
 - [Phase 1 resolved]: Filter gain unit mismatch — addressed with dB-to-linear conversion test (passing)
 
 ## Session Continuity
 
-Last session: 2026-02-24
-Stopped at: Completed 03-04-PLAN.md (visual verification checkpoint — Phase 3 complete)
-Resume file: .planning/phases/03-gui-studio-mode/03-04-SUMMARY.md
+Last session: 2026-02-25
+Stopped at: All phases complete — TONEWORD v1 roadmap finished
+Resume file: .planning/phases/04-validation-and-distribution/04-03-SUMMARY.md
