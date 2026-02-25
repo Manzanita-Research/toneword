@@ -85,6 +85,20 @@ export function useAudioEngine() {
     return file.name;
   }, [initAudio, connectSource]);
 
+  const disconnectSource = useCallback(() => {
+    if (!sourceRef.current) return;
+    // Stop buffer sources
+    if ('stop' in sourceRef.current) {
+      try { (sourceRef.current as AudioBufferSourceNode).stop(); } catch { /* already stopped */ }
+    }
+    // Release mic hardware
+    if ('mediaStream' in sourceRef.current) {
+      (sourceRef.current as MediaStreamAudioSourceNode).mediaStream.getTracks().forEach(t => t.stop());
+    }
+    try { sourceRef.current.disconnect(); } catch { /* already disconnected */ }
+    sourceRef.current = null;
+  }, []);
+
   const applyState = useCallback((state: SemanticState) => {
     engineApplyState(state, filtersRef.current, BANDS);
   }, []);
@@ -101,6 +115,7 @@ export function useAudioEngine() {
     initAudio,
     connectMic,
     connectFile,
+    disconnectSource,
     applyState,
     toggleBypass,
     ctxRef,
