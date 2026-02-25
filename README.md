@@ -6,7 +6,7 @@ TONEWORD replaces frequency/gain/Q knobs with perceptual tone words: Warmth, Bit
 
 ## Why this exists
 
-EQ interfaces are stuck in the audio engineering paradigm. Tools like Pro-Q give you surgical precision across thousands of frequency points, but they train you to EQ with your eyes instead of your ears. TONEWORD goes the other direction: describe what you want to hear, and build frequency intuition over time as the "under the hood" panel reveals what's actually happening.
+EQ interfaces are stuck in the audio engineering paradigm. Tools like Pro-Q give you surgical precision across thousands of frequency points, but they train you to EQ with your eyes instead of your ears. TONEWORD goes the other direction: describe what you want to hear, and build frequency intuition over time as the teaching panel reveals what's actually happening.
 
 ## What it does
 
@@ -15,22 +15,27 @@ EQ interfaces are stuck in the audio engineering paradigm. Tools like Pro-Q give
 - **Cross-coupled gain mappings** — boosting Glass automatically cuts Velvet frequencies, mirroring perceptual opposition
 - **Soft-clipping via `tanh`** prevents extreme gains when stacking dimensions
 - **Tone Recipes** — preset combinations (Nashville Twang, Midnight Jazz, Punk Scoop, etc.)
-- **Two UI modes**: Studio (sliders + spectrum analyzer + EQ curve) and Pedal (realistic hardware mockup with OLED display and rotary knobs)
+- **Teaching panel** — shows the EQ curve and per-band gains so you learn what "Warmth" actually means in frequency space
 
-## Running it
+## Plugin
 
-Open `toneword.html` in a browser. Click "Mic / Guitar In" to process live input from an audio interface, or "Load Audio" to process a file. Toggle between Studio and Pedal views with the bar at the top.
+TONEWORD is a JUCE audio plugin (VST3, AU, Standalone) built on the [pamplejuce](https://github.com/sudara/pamplejuce) template. The DSP engine runs an 11-band parametric EQ with gains computed from six semantic dimensions.
 
-## Tech
+Formats: **VST3** / **AU** / **Standalone**
+Platform: **macOS 12+** (Universal Binary — Apple Silicon + Intel)
 
-Single-file HTML/CSS/JS using the Web Audio API. No build system, no dependencies. The audio graph chains 11 `BiquadFilterNode` instances with gain values computed from the semantic state.
+See [DEVELOPMENT.md](DEVELOPMENT.md) for build instructions.
+
+## Web prototype
+
+The `web/` directory contains the original browser-based prototype — a React + Vite app using the Web Audio API. It's where the semantic mapping was designed and tested before porting to JUCE.
 
 ## Status
 
-Working prototype. The semantic-to-parametric mapping is functional and sounds good. The pedal mode is a visual mockup — knobs drag, OLED renders, everything syncs with studio mode.
+v0.1.0. The plugin builds, passes pluginval (strictness 10) and auval validation, and has CI via GitHub Actions. The semantic-to-parametric mapping is functional and sounds good. GUI has studio mode with sliders, spectrum analyzer, EQ curve, and a teaching panel that breaks down per-band contributions.
 
 ## Roadmap
 
-1. **JUCE VST plugin** — bring TONEWORD into DAWs
+1. ~~JUCE plugin~~ — done
 2. **Physical stompbox** — Electro-Smith Daisy Seed platform, OLED + 6 encoders
 3. **Broader ecosystem** — more "ears over eyes" tools for guitarists and producers
