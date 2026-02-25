@@ -153,6 +153,11 @@ void TonewordAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     // Process audio through the semantic EQ
     juce::dsp::AudioBlock<float> block (buffer);
     semanticEQ.process (block);
+
+    // Push post-EQ samples to spectrum FIFO for visualization
+    auto* channelData = buffer.getReadPointer (0);
+    for (int i = 0; i < buffer.getNumSamples(); ++i)
+        spectrumData.pushSample (channelData[i]);
 }
 
 bool TonewordAudioProcessor::hasEditor() const { return true; }

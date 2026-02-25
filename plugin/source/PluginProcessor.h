@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DSP/SemanticEQ.h"
+#include "DSP/SpectrumData.h"
 #include "Parameters.h"
 #include "Presets/PresetManager.h"
 #include <juce_audio_processors/juce_audio_processors.h>
@@ -41,6 +42,7 @@ public:
 
     juce::AudioProcessorValueTreeState& getAPVTS() { return parameters; }
     PresetManager& getPresetManager() { return presetManager; }
+    SpectrumData& getSpectrumData() { return spectrumData; }
 
 private:
     juce::UndoManager undoManager;
@@ -59,6 +61,9 @@ private:
     std::atomic<float>* snapSmoothParam = nullptr;
 
     PresetManager presetManager;
+
+    // Spectrum visualization data (lock-free audio-to-GUI)
+    SpectrumData spectrumData;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TonewordAudioProcessor)
 };
