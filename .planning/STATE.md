@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** Musicians shape tone with their ears, not their eyes — TONEWORD makes EQ work the way guitarists already think about sound.
-**Current focus:** Phase 3 — GUI Studio Mode (visualization panels done, sliders + layout next)
+**Current focus:** Phase 3 — GUI Studio Mode (sliders + viz panels done, editor integration next)
 
 ## Current Position
 
 Phase: 3 of 4 (GUI — Studio Mode)
-Plan: 2 of 4
-Status: Plan 03-02 complete (visualization panels)
-Last activity: 2026-02-24 — Plan 03-02 complete (spectrum analyzer + EQ curve)
+Plan: 3 of 4
+Status: Plan 03-01 complete (slider components)
+Last activity: 2026-02-24 — Plan 03-01 complete (LookAndFeel, DimensionSlider, SliderPanel)
 
-Progress: [████████░░] 80%
+Progress: [████████░░] 82%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
+- Total plans completed: 13
 - Average duration: ~7min
-- Total execution time: ~84min
+- Total execution time: ~89min
 
 **By Phase:**
 
@@ -30,7 +30,7 @@ Progress: [████████░░] 80%
 | 0 | 4/4 | 20min | 5min |
 | 1 | 3/3 | ~15min | ~5min |
 | 2 | 3/3 | 17min | 6min |
-| 3 | 2/4 | 32min | 16min |
+| 3 | 3/4 | 37min | 12min |
 
 *Updated after each plan completion*
 
@@ -63,6 +63,8 @@ Recent decisions affecting current work:
 - [Phase 3]: EQCurvePanel recomputes response from APVTS values on GUI thread (no audio-thread state reads)
 - [Phase 3]: Shared GUIHelpers::freqToX for consistent log-frequency mapping across viz panels
 - [Phase 3]: Temporal smoothing 0.8/0.2 decay for spectrum analyzer stability
+- [Phase 3]: Dimension colors as static constexpr array indexed by Dimension enum
+- [Phase 3]: Float coordinates throughout LookAndFeel for HiDPI correctness
 
 ### Pending Todos
 
@@ -76,5 +78,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 03-02-PLAN.md (visualization panels — spectrum analyzer + EQ curve)
-Resume file: .planning/phases/03-gui-studio-mode/03-02-SUMMARY.md
+Stopped at: Completed 03-01-PLAN.md (slider components — LookAndFeel, DimensionSlider, SliderPanel)
+Resume file: .planning/phases/03-gui-studio-mode/03-01-SUMMARY.md
