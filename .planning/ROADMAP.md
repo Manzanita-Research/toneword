@@ -17,6 +17,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: State, Presets, and Parameter Model** - DAW save/recall, factory presets, stable parameter IDs (completed 2026-02-25)
 - [x] **Phase 3: GUI — Studio Mode** - Full visual interface: controls, EQ curve, spectrum analyzer, teaching layer (completed 2026-02-24)
 - [x] **Phase 4: Validation and Distribution** - pluginval CI, macOS code signing, notarized release package (completed 2026-02-25)
+- [ ] **Phase 5: CI and Packaging Fixes** - Fix GitHub Actions versions and missing packaging resource (gap closure)
+- [ ] **Phase 6: Retroactive Verification Documentation** - Create missing VERIFICATION.md files and update all requirement checkboxes (gap closure)
 
 ## Phase Details
 
@@ -104,6 +106,29 @@ Plans:
 - [x] 04-02-PLAN.md — Code signing, notarization, .pkg packaging, GitHub Release
 - [x] 04-03-PLAN.md — Workflow validation and human review checkpoint
 
+### Phase 5: CI and Packaging Fixes
+**Goal**: Fix CI workflow bugs that prevent GitHub Actions from running, and resolve missing packaging resource so distribution pipeline works end-to-end
+**Depends on**: Phase 4
+**Requirements**: FMT-03
+**Gap Closure:** Closes integration gaps and conditional flow from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. GitHub Actions workflow uses valid action versions (@v4) and parses without errors
+  2. `background.png` exists in packaging resources OR is removed from distribution.xml.template
+  3. CI workflow can be pushed and run without immediate failures
+**Plans:** TBD
+
+### Phase 6: Retroactive Verification Documentation
+**Goal**: Create formal VERIFICATION.md artifacts for Phase 1 and Phase 4, and update all requirement checkboxes in REQUIREMENTS.md to reflect actual completion status
+**Depends on**: Phase 5
+**Requirements**: DSP-01, DSP-02, DSP-03, DSP-04, DSP-05, DSP-06, DSP-07, FMT-01, FMT-02, FMT-03, FMT-04, WEB-01, WEB-02, WEB-03, WEB-04, WEB-05
+**Gap Closure:** Closes all 11 orphaned requirements and 5 checkbox-only gaps from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. Phase 1 VERIFICATION.md exists documenting all 10 requirements with evidence from integration checker and user DAW approval
+  2. Phase 4 VERIFICATION.md exists documenting FMT-03 with evidence from summaries and CI workflow review
+  3. All 27 REQUIREMENTS.md checkboxes reflect actual status (16 currently unchecked requirements marked complete)
+  4. Traceability table status column updated for all gap closure requirements
+**Plans:** TBD
+
 ## Progress
 
 **Execution Order:**
@@ -116,3 +141,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
 | 3. GUI — Studio Mode | 4/4 | Complete | 2026-02-24 |
 | 4. Validation and Distribution | 3/3 | Complete | 2026-02-25 |
+| 5. CI and Packaging Fixes | 0/? | Pending | — |
+| 6. Retroactive Verification Docs | 0/? | Pending | — |

@@ -87,22 +87,22 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| WEB-01 | Phase 0 | Pending |
-| WEB-02 | Phase 0 | Pending |
-| WEB-03 | Phase 0 | Pending |
-| WEB-04 | Phase 0 | Pending |
-| WEB-05 | Phase 0 | Pending |
-| DSP-01 | Phase 1 | Pending |
-| DSP-02 | Phase 1 | Pending |
-| DSP-03 | Phase 1 | Pending |
-| DSP-04 | Phase 1 | Pending |
-| DSP-05 | Phase 1 | Pending |
-| DSP-06 | Phase 1 | Pending |
-| DSP-07 | Phase 1 | Pending |
-| FMT-01 | Phase 1 | Pending |
-| FMT-02 | Phase 1 | Pending |
-| FMT-03 | Phase 4 | Pending |
-| FMT-04 | Phase 1 | Pending |
+| WEB-01 | Phase 0 → Phase 6 | Pending |
+| WEB-02 | Phase 0 → Phase 6 | Pending |
+| WEB-03 | Phase 0 → Phase 6 | Pending |
+| WEB-04 | Phase 0 → Phase 6 | Pending |
+| WEB-05 | Phase 0 → Phase 6 | Pending |
+| DSP-01 | Phase 1 → Phase 6 | Pending |
+| DSP-02 | Phase 1 → Phase 6 | Pending |
+| DSP-03 | Phase 1 → Phase 6 | Pending |
+| DSP-04 | Phase 1 → Phase 6 | Pending |
+| DSP-05 | Phase 1 → Phase 6 | Pending |
+| DSP-06 | Phase 1 → Phase 6 | Pending |
+| DSP-07 | Phase 1 → Phase 6 | Pending |
+| FMT-01 | Phase 1 → Phase 6 | Pending |
+| FMT-02 | Phase 1 → Phase 6 | Pending |
+| FMT-03 | Phase 4 → Phase 5 | Pending |
+| FMT-04 | Phase 1 → Phase 6 | Pending |
 | STA-01 | Phase 2 | Complete |
 | STA-02 | Phase 2 | Complete |
 | STA-03 | Phase 2 | Complete |
@@ -122,4 +122,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-24*
-*Last updated: 2026-02-24 after roadmap creation*
+*Last updated: 2026-02-25 after gap closure phase creation*
