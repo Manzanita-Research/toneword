@@ -18,10 +18,7 @@ export function SliderGroup({ state, onDimensionChange }: SliderGroupProps) {
             <div className="flex justify-between items-baseline mb-2.5">
               <span
                 className="font-display text-xl tracking-[-0.01em] transition-colors duration-300"
-                style={{
-                  color: DIMENSION_COLORS[dim],
-                  fontVariationSettings: "'WONK' 1, 'opsz' 20",
-                }}
+                style={{ color: DIMENSION_COLORS[dim] }}
               >
                 {dim.charAt(0).toUpperCase() + dim.slice(1)}
               </span>
@@ -29,7 +26,7 @@ export function SliderGroup({ state, onDimensionChange }: SliderGroupProps) {
                 {state[dim] > 0 ? '+' : ''}{state[dim]}
               </span>
             </div>
-            <div className="font-body text-[11px] text-text-dim mb-2.5 leading-relaxed" style={{ fontVariationSettings: "'opsz' 11" }}>
+            <div className="font-body text-[11px] text-text-dim mb-2.5 leading-relaxed">
               {DIMENSION_DESCRIPTIONS[dim]}
             </div>
             <input

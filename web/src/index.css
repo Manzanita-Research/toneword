@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Commit Mono — custom Manzanita build */
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/fonts/CommitMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @theme {
   /* Warm dark palette — cabin at night, not cold terminal */
   --color-bg: #1A1A1A;
@@ -23,9 +31,9 @@
   --color-velvet: #8a5ab8;
 
   /* Typography — Whole Earth Catalog meets Laurel Canyon */
-  --font-display: 'New Spirit', 'Fraunces', serif;
+  --font-display: 'Fraunces', serif;
   --font-body: 'Source Serif 4', serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-mono: 'Commit Mono', monospace;
 }
 
 /* Global base */
@@ -48,6 +56,18 @@ body::before {
   pointer-events: none;
   z-index: 1000;
   mix-blend-mode: multiply;
+}
+
+/* Fraunces variable font — soft wonky display */
+.font-display {
+  font-variation-settings: 'WONK' 1, 'SOFT' 100;
+}
+
+/* Commit Mono — Manzanita custom build OpenType features */
+.font-mono {
+  font-feature-settings:
+    'cv01' 1, 'cv03' 1, 'cv04' 1, 'cv06' 1, 'cv11' 1,
+    'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss05' 1;
 }
 
 /* Reduced motion */

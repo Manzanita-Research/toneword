@@ -104,7 +104,6 @@ export function PedalMode({
         {/* Brand */}
         <div
           className="font-display text-xl tracking-[-0.01em] text-white/50 mb-0.5 text-center z-[2]"
-          style={{ fontVariationSettings: "'WONK' 1, 'opsz' 20" }}
         >
           TONE<em className="text-body/70 italic">WORD</em>
         </div>

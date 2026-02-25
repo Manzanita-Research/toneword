@@ -110,11 +110,10 @@ function App() {
           <header className="mb-12">
             <div
               className="font-display text-[42px] tracking-[-0.02em] leading-[1.1] mb-1.5"
-              style={{ fontVariationSettings: "'WONK' 1, 'opsz' 42" }}
             >
               TONE<span className="italic text-body">WORD</span>
             </div>
-            <div className="font-body text-[13px] tracking-[0.02em] text-text-dim" style={{ fontVariationSettings: "'opsz' 14" }}>
+            <div className="font-body text-[13px] tracking-[0.02em] text-text-dim">
               Semantic EQ — speak your tone into being
             </div>
           </header>

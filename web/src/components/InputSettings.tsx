@@ -92,7 +92,7 @@ export function InputSettings({
 
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[901] w-[380px] max-w-[90vw] bg-surface border border-border rounded-lg p-6 max-h-[85vh] overflow-y-auto" style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.4)' }}>
         <div className="flex items-center justify-between mb-5">
-          <h2 className="font-display text-lg tracking-tight" style={{ fontVariationSettings: "'WONK' 1" }}>
+          <h2 className="font-display text-lg tracking-tight">
             Settings
           </h2>
           <button

@@ -14,7 +14,7 @@ const FREQ_LABELS: [number, string][] = [
 ];
 
 function drawFreqGrid(ctx: CanvasRenderingContext2D, w: number, h: number) {
-  ctx.font = '9px "Geist Mono", monospace';
+  ctx.font = '9px "Commit Mono", monospace';
   ctx.fillStyle = 'rgba(120, 117, 111, 0.3)';
   ctx.strokeStyle = 'rgba(120, 117, 111, 0.08)';
   ctx.lineWidth = 1;
@@ -133,7 +133,7 @@ export function EQCurve({ filtersRef, state: _state }: EQCurveProps) {
     ctx.setLineDash([]);
 
     // dB labels
-    ctx.font = '9px "Geist Mono", monospace';
+    ctx.font = '9px "Commit Mono", monospace';
     ctx.fillStyle = 'rgba(120, 117, 111, 0.5)';
     ctx.fillText('+12dB', 4, midY - (h - 40) / 2 + 4);
     ctx.fillText('-12dB', 4, midY + (h - 40) / 2 + 4);
