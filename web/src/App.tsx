@@ -126,7 +126,7 @@ function App() {
             onBypassToggle={handleBypassToggle}
             inputAnalyserRef={engine.inputAnalyserRef}
             onSettingsOpen={() => setSettingsOpen(true)}
-            hasDeviceSelected={!!selectedDeviceId}
+
           />
 
           <StudioMode

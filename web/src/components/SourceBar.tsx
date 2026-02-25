@@ -8,10 +8,9 @@ interface SourceBarProps {
   onBypassToggle: () => void;
   inputAnalyserRef: React.RefObject<AnalyserNode | null>;
   onSettingsOpen: () => void;
-  hasDeviceSelected: boolean;
 }
 
-export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onSettingsOpen, hasDeviceSelected }: SourceBarProps) {
+export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onSettingsOpen }: SourceBarProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
