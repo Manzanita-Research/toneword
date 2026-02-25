@@ -3,8 +3,18 @@
 TonewordAudioProcessor::TonewordAudioProcessor()
     : AudioProcessor (BusesProperties()
                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
-                      .withOutput ("Output", juce::AudioChannelSet::stereo(), true))
+                      .withOutput ("Output", juce::AudioChannelSet::stereo(), true)),
+      parameters (*this, &undoManager, "PARAMETERS", createParameterLayout())
 {
+    // Cache atomic pointers to parameter values for lock-free audio-thread access
+    for (int i = 0; i < NUM_DIMENSIONS; ++i)
+    {
+        auto* param = parameters.getRawParameterValue (ParamIDs::allIDs[i]);
+        parameterValues[static_cast<size_t> (i)] = param;
+    }
+
+    bypassParam    = parameters.getRawParameterValue (ParamIDs::Bypass);
+    snapSmoothParam = parameters.getRawParameterValue (ParamIDs::SnapSmooth);
 }
 
 TonewordAudioProcessor::~TonewordAudioProcessor() {}
@@ -21,12 +31,40 @@ void TonewordAudioProcessor::setCurrentProgram (int index) { juce::ignoreUnused 
 const juce::String TonewordAudioProcessor::getProgramName (int index) { juce::ignoreUnused (index); return {}; }
 void TonewordAudioProcessor::changeProgramName (int index, const juce::String& newName) { juce::ignoreUnused (index, newName); }
 
-void TonewordAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+juce::AudioProcessorParameter* TonewordAudioProcessor::getBypassParameter() const
 {
-    juce::ignoreUnused (sampleRate, samplesPerBlock);
+    return parameters.getParameter (ParamIDs::Bypass);
 }
 
-void TonewordAudioProcessor::releaseResources() {}
+void TonewordAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+{
+    // Prepare the DSP engine
+    juce::dsp::ProcessSpec spec;
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = static_cast<juce::uint32> (samplesPerBlock);
+    spec.numChannels = static_cast<juce::uint32> (getTotalNumOutputChannels());
+
+    semanticEQ.prepare (spec);
+
+    // Reset SmoothedValues with 20ms ramp time
+    for (auto& sv : smoothedDimensions)
+    {
+        sv.reset (sampleRate, 0.02); // 20ms ramp
+        sv.setCurrentAndTargetValue (0.0f);
+    }
+
+    // Set initial SmoothedValue targets from current parameter values
+    for (int i = 0; i < NUM_DIMENSIONS; ++i)
+    {
+        float val = parameterValues[static_cast<size_t> (i)]->load();
+        smoothedDimensions[static_cast<size_t> (i)].setCurrentAndTargetValue (val);
+    }
+}
+
+void TonewordAudioProcessor::releaseResources()
+{
+    semanticEQ.reset();
+}
 
 bool TonewordAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
@@ -48,10 +86,38 @@ void TonewordAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    // Clear any extra output channels
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // Audio passes through unchanged — DSP engine wired in Plan 02/03
+    // Skip DSP when bypassed — pass audio through unprocessed
+    if (bypassParam->load() > 0.5f)
+        return;
+
+    // Read parameter values and update SmoothedValues
+    bool anySmoothing = false;
+    for (int i = 0; i < NUM_DIMENSIONS; ++i)
+    {
+        float target = parameterValues[static_cast<size_t> (i)]->load();
+        smoothedDimensions[static_cast<size_t> (i)].setTargetValue (target);
+
+        if (smoothedDimensions[static_cast<size_t> (i)].isSmoothing())
+            anySmoothing = true;
+    }
+
+    // Skip the next value to advance the SmoothedValue,
+    // then set the dimension on the EQ
+    for (int i = 0; i < NUM_DIMENSIONS; ++i)
+    {
+        float smoothed = smoothedDimensions[static_cast<size_t> (i)].skip (buffer.getNumSamples());
+        semanticEQ.setDimension (static_cast<Dimension> (i), smoothed);
+    }
+
+    juce::ignoreUnused (anySmoothing);
+
+    // Process audio through the semantic EQ
+    juce::dsp::AudioBlock<float> block (buffer);
+    semanticEQ.process (block);
 }
 
 bool TonewordAudioProcessor::hasEditor() const { return true; }
@@ -63,12 +129,20 @@ juce::AudioProcessorEditor* TonewordAudioProcessor::createEditor()
 
 void TonewordAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    juce::ignoreUnused (destData);
+    auto state = parameters.copyState();
+    state.setProperty ("currentPreset", currentPresetIndex, nullptr);
+    std::unique_ptr<juce::XmlElement> xml (state.createXml());
+    copyXmlToBinary (*xml, destData);
 }
 
 void TonewordAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    juce::ignoreUnused (data, sizeInBytes);
+    std::unique_ptr<juce::XmlElement> xml (getXmlFromBinary (data, sizeInBytes));
+    if (xml != nullptr && xml->hasTagName (parameters.state.getType()))
+    {
+        parameters.replaceState (juce::ValueTree::fromXml (*xml));
+        currentPresetIndex = parameters.state.getProperty ("currentPreset", 0);
+    }
 }
 
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()

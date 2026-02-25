@@ -1,5 +1,7 @@
 #pragma once
 
+#include "DSP/SemanticEQ.h"
+#include "Parameters.h"
 #include <juce_audio_processors/juce_audio_processors.h>
 
 class TonewordAudioProcessor : public juce::AudioProcessor
@@ -34,6 +36,27 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    juce::AudioProcessorParameter* getBypassParameter() const override;
+
+    juce::AudioProcessorValueTreeState& getAPVTS() { return parameters; }
+
 private:
+    juce::UndoManager undoManager;
+    juce::AudioProcessorValueTreeState parameters;
+
+    // DSP engine
+    SemanticEQ semanticEQ;
+
+    // SmoothedValue for each dimension — prevents zipper noise
+    std::array<juce::SmoothedValue<float, juce::ValueSmoothingTypes::Linear>, NUM_DIMENSIONS> smoothedDimensions;
+
+    // Atomic pointers to parameter values (lock-free read from audio thread)
+    std::array<std::atomic<float>*, NUM_DIMENSIONS> parameterValues {};
+
+    std::atomic<float>* bypassParam = nullptr;
+    std::atomic<float>* snapSmoothParam = nullptr;
+
+    int currentPresetIndex = 0;
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TonewordAudioProcessor)
 };
