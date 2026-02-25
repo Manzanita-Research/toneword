@@ -4,7 +4,8 @@ TonewordAudioProcessor::TonewordAudioProcessor()
     : AudioProcessor (BusesProperties()
                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
                       .withOutput ("Output", juce::AudioChannelSet::stereo(), true)),
-      parameters (*this, &undoManager, "PARAMETERS", createParameterLayout())
+      parameters (*this, &undoManager, "PARAMETERS", createParameterLayout()),
+      presetManager (parameters)
 {
     // Cache atomic pointers to parameter values for lock-free audio-thread access
     for (int i = 0; i < NUM_DIMENSIONS; ++i)
@@ -15,6 +16,9 @@ TonewordAudioProcessor::TonewordAudioProcessor()
 
     bypassParam    = parameters.getRawParameterValue (ParamIDs::Bypass);
     snapSmoothParam = parameters.getRawParameterValue (ParamIDs::SnapSmooth);
+
+    // Write factory preset XML files to disk if they don't exist yet
+    presetManager.initializePresetFiles();
 }
 
 TonewordAudioProcessor::~TonewordAudioProcessor() {}
@@ -25,10 +29,40 @@ bool TonewordAudioProcessor::producesMidi() const { return false; }
 bool TonewordAudioProcessor::isMidiEffect() const { return false; }
 double TonewordAudioProcessor::getTailLengthSeconds() const { return 0.0; }
 
-int TonewordAudioProcessor::getNumPrograms() { return 1; }
-int TonewordAudioProcessor::getCurrentProgram() { return 0; }
-void TonewordAudioProcessor::setCurrentProgram (int index) { juce::ignoreUnused (index); }
-const juce::String TonewordAudioProcessor::getProgramName (int index) { juce::ignoreUnused (index); return {}; }
+int TonewordAudioProcessor::getNumPrograms() { return presetManager.getNumPresets(); }
+int TonewordAudioProcessor::getCurrentProgram() { return presetManager.getCurrentIndex(); }
+
+void TonewordAudioProcessor::setCurrentProgram (int index)
+{
+    bool isSmooth = snapSmoothParam->load() > 0.5f;
+
+    if (isSmooth)
+    {
+        // Temporarily extend ramp for smooth preset morph (~150ms)
+        double sr = getSampleRate();
+        if (sr > 0)
+        {
+            for (auto& sv : smoothedDimensions)
+                sv.reset (sr, 0.15); // 150ms morph
+        }
+    }
+
+    presetManager.loadPreset (index, isSmooth);
+
+    if (isSmooth)
+    {
+        // Restore normal 20ms ramp — only affects the NEXT target change,
+        // the current smoothing in progress will complete at 150ms rate
+        double sr = getSampleRate();
+        if (sr > 0)
+        {
+            for (auto& sv : smoothedDimensions)
+                sv.reset (sr, 0.02); // 20ms ramp
+        }
+    }
+}
+
+const juce::String TonewordAudioProcessor::getProgramName (int index) { return presetManager.getPresetName (index); }
 void TonewordAudioProcessor::changeProgramName (int index, const juce::String& newName) { juce::ignoreUnused (index, newName); }
 
 juce::AudioProcessorParameter* TonewordAudioProcessor::getBypassParameter() const
@@ -130,7 +164,7 @@ juce::AudioProcessorEditor* TonewordAudioProcessor::createEditor()
 void TonewordAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
     auto state = parameters.copyState();
-    state.setProperty ("currentPreset", currentPresetIndex, nullptr);
+    state.setProperty ("currentPreset", presetManager.getCurrentIndex(), nullptr);
     std::unique_ptr<juce::XmlElement> xml (state.createXml());
     copyXmlToBinary (*xml, destData);
 }
@@ -141,7 +175,8 @@ void TonewordAudioProcessor::setStateInformation (const void* data, int sizeInBy
     if (xml != nullptr && xml->hasTagName (parameters.state.getType()))
     {
         parameters.replaceState (juce::ValueTree::fromXml (*xml));
-        currentPresetIndex = parameters.state.getProperty ("currentPreset", 0);
+        int restoredIndex = parameters.state.getProperty ("currentPreset", 0);
+        presetManager.setCurrentIndex (restoredIndex);
     }
 }
 

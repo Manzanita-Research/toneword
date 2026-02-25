@@ -2,6 +2,7 @@
 
 #include "DSP/SemanticEQ.h"
 #include "Parameters.h"
+#include "Presets/PresetManager.h"
 #include <juce_audio_processors/juce_audio_processors.h>
 
 class TonewordAudioProcessor : public juce::AudioProcessor
@@ -39,6 +40,7 @@ public:
     juce::AudioProcessorParameter* getBypassParameter() const override;
 
     juce::AudioProcessorValueTreeState& getAPVTS() { return parameters; }
+    PresetManager& getPresetManager() { return presetManager; }
 
 private:
     juce::UndoManager undoManager;
@@ -56,7 +58,7 @@ private:
     std::atomic<float>* bypassParam = nullptr;
     std::atomic<float>* snapSmoothParam = nullptr;
 
-    int currentPresetIndex = 0;
+    PresetManager presetManager;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (TonewordAudioProcessor)
 };
