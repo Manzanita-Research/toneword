@@ -43,8 +43,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### GUI — Studio Mode
 
 - [ ] **GUI-01**: Six semantic dimension controls with labeled bipolar range (-100 to +100)
-- [ ] **GUI-02**: Composite EQ curve visualization showing the combined effect of all dimensions
-- [ ] **GUI-03**: Real-time spectrum analyzer (pre/post EQ)
+- [x] **GUI-02**: Composite EQ curve visualization showing the combined effect of all dimensions
+- [x] **GUI-03**: Real-time spectrum analyzer (pre/post EQ)
 - [ ] **GUI-04**: Teaching layer: read-only parameter table showing actual frequency/gain/Q values for all 11 bands
 - [ ] **GUI-05**: Plugin window supports HiDPI/Retina displays without blurriness
 - [ ] **GUI-06**: Plugin UI is resizable
@@ -109,8 +109,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | STA-04 | Phase 2 | Complete |
 | STA-05 | Phase 2 | Complete |
 | GUI-01 | Phase 3 | Pending |
-| GUI-02 | Phase 3 | Pending |
-| GUI-03 | Phase 3 | Pending |
+| GUI-02 | Phase 3 | Complete |
+| GUI-03 | Phase 3 | Complete |
 | GUI-04 | Phase 3 | Pending |
 | GUI-05 | Phase 3 | Pending |
 | GUI-06 | Phase 3 | Pending |

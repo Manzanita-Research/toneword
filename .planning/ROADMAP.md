@@ -84,8 +84,8 @@ Plans:
 **Plans:** 4 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — LookAndFeel + dimension slider component + 2x3 slider grid
-- [ ] 03-02-PLAN.md — Spectrum analyzer (FFT FIFO) + EQ curve visualization
+- [x] 03-01-PLAN.md — LookAndFeel + dimension slider component + 2x3 slider grid
+- [x] 03-02-PLAN.md — Spectrum analyzer (FFT FIFO) + EQ curve visualization
 - [ ] 03-03-PLAN.md — Teaching panel + editor assembly (replace GenericEditor) + resizable/HiDPI
 - [ ] 03-04-PLAN.md — Visual verification checkpoint
 
@@ -109,5 +109,5 @@ Phases execute in numeric order: 0 → 1 → 2 → 3 → 4
 | 0. Web Reference Build | 4/4 | Complete | 2026-02-24 |
 | 1. DSP Engine and Plugin Scaffold | 3/3 | Complete | 2026-02-24 |
 | 2. State, Presets, and Parameter Model | 3/3 | Complete | 2026-02-25 |
-| 3. GUI — Studio Mode | 0/4 | Not started | - |
+| 3. GUI — Studio Mode | 2/4 | In progress | - |
 | 4. Validation and Distribution | 0/TBD | Not started | - |

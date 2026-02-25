@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-24)
 
 **Core value:** Musicians shape tone with their ears, not their eyes — TONEWORD makes EQ work the way guitarists already think about sound.
-**Current focus:** Phase 2 complete — ready for Phase 3
+**Current focus:** Phase 3 — GUI Studio Mode (visualization panels done, sliders + layout next)
 
 ## Current Position
 
-Phase: 2 of 4 (State, Presets, and Parameter Model) -- COMPLETE
-Plan: 3 of 3
-Status: Phase 2 complete, ready for Phase 3
-Last activity: 2026-02-24 — Plan 02-03 complete (preset browser UI)
+Phase: 3 of 4 (GUI — Studio Mode)
+Plan: 2 of 4
+Status: Plan 03-02 complete (visualization panels)
+Last activity: 2026-02-24 — Plan 03-02 complete (spectrum analyzer + EQ curve)
 
-Progress: [███████░░░] 70%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: ~5min
-- Total execution time: ~52min
+- Total plans completed: 12
+- Average duration: ~7min
+- Total execution time: ~84min
 
 **By Phase:**
 
@@ -30,6 +30,7 @@ Progress: [███████░░░] 70%
 | 0 | 4/4 | 20min | 5min |
 | 1 | 3/3 | ~15min | ~5min |
 | 2 | 3/3 | 17min | 6min |
+| 3 | 2/4 | 32min | 16min |
 
 *Updated after each plan completion*
 
@@ -58,6 +59,10 @@ Recent decisions affecting current work:
 - [Phase 2]: Presets 5-9 are placeholders to re-tune by ear before release
 - [Phase 2]: Embed GenericAudioProcessorEditor below preset bar for incremental UI development
 - [Phase 2]: Timer-based 5Hz refresh for ComboBox selection and dirty indicator sync
+- [Phase 3]: Header-only SpectrumData in DSP/ for lock-free audio-to-GUI data flow
+- [Phase 3]: EQCurvePanel recomputes response from APVTS values on GUI thread (no audio-thread state reads)
+- [Phase 3]: Shared GUIHelpers::freqToX for consistent log-frequency mapping across viz panels
+- [Phase 3]: Temporal smoothing 0.8/0.2 decay for spectrum analyzer stability
 
 ### Pending Todos
 
@@ -71,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-24
-Stopped at: Completed 02-03-PLAN.md (preset browser UI — Phase 2 complete)
-Resume file: .planning/phases/02-state-presets-and-parameter-model/02-03-SUMMARY.md
+Stopped at: Completed 03-02-PLAN.md (visualization panels — spectrum analyzer + EQ curve)
+Resume file: .planning/phases/03-gui-studio-mode/03-02-SUMMARY.md
