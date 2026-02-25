@@ -84,7 +84,7 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onS
       />
 
       {source && source !== 'mic' && (
-        <span className="text-[11px] text-text-mid overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px] font-body">
+        <span className="text-[11px] text-text-mid overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px] font-mono">
           {source}
         </span>
       )}

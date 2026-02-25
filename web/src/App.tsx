@@ -113,7 +113,7 @@ function App() {
             >
               TONE<span className="italic text-body">WORD</span>
             </div>
-            <div className="font-body text-[13px] tracking-[0.02em] text-text-dim">
+            <div className="font-mono text-[13px] tracking-[0.02em] text-text-dim">
               Semantic EQ — speak your tone into being
             </div>
           </header>

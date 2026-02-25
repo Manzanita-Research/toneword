@@ -108,7 +108,7 @@ export function InputSettings({
         <section className="mb-6">
           <h3 className="text-[10px] tracking-[0.15em] uppercase text-text-dim mb-3">Audio Input</h3>
           {devices.length === 0 ? (
-            <p className="text-text-dim text-xs font-body">
+            <p className="text-text-dim text-xs font-mono">
               No input devices found. Check your browser permissions.
             </p>
           ) : (
@@ -140,7 +140,7 @@ export function InputSettings({
           <h3 className="text-[10px] tracking-[0.15em] uppercase text-text-dim mb-3">MIDI Control</h3>
 
           {!midiAvailable ? (
-            <p className="text-text-dim text-xs font-body">
+            <p className="text-text-dim text-xs font-mono">
               Web MIDI not available in this browser.
             </p>
           ) : (
@@ -159,7 +159,7 @@ export function InputSettings({
               {midiConfig.enabled && (
                 <>
                   {/* Connected devices */}
-                  <div className="text-[10px] text-text-dim font-body">
+                  <div className="text-[10px] text-text-dim font-mono">
                     {midiPorts.length === 0
                       ? 'No MIDI devices connected'
                       : `${midiPorts.length} device${midiPorts.length > 1 ? 's' : ''}: ${midiPorts.map((p) => p.name).join(', ')}`
@@ -216,7 +216,7 @@ export function InputSettings({
           )}
         </section>
 
-        <p className="text-[10px] text-text-dim mt-5 leading-relaxed font-body">
+        <p className="text-[10px] text-text-dim mt-5 leading-relaxed font-mono">
           Send a CC value above 63 to toggle bypass. Use Learn to auto-detect your footswitch CC.
         </p>
       </div>

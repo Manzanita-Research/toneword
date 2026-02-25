@@ -26,7 +26,7 @@ export function SliderGroup({ state, onDimensionChange }: SliderGroupProps) {
                 {state[dim] > 0 ? '+' : ''}{state[dim]}
               </span>
             </div>
-            <div className="font-body text-[11px] text-text-dim mb-2.5 leading-relaxed">
+            <div className="font-mono text-[11px] text-text-dim mb-2.5 leading-relaxed">
               {DIMENSION_DESCRIPTIONS[dim]}
             </div>
             <input

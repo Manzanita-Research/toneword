@@ -107,7 +107,7 @@ export function PedalMode({
         >
           TONE<em className="text-body/70 italic">WORD</em>
         </div>
-        <div className="font-body text-[9px] tracking-[0.2em] uppercase text-text-dim/40 mb-4 z-[2]">
+        <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-text-dim/40 mb-4 z-[2]">
           Semantic EQ
         </div>
 
