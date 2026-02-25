@@ -124,8 +124,8 @@ jobs:
       - name: Add Custom Icons
         if: ${{ steps.keychain.outcome == 'success' }}
         run: |
-          sips -i packaging/pamplejuce.icns
-          DeRez -only icns packaging/pamplejuce.icns > /tmp/icons
+          sips -i packaging/toneword.icns
+          DeRez -only icns packaging/toneword.icns > /tmp/icons
           Rez -a /tmp/icons -o "${{ env.VST3_PATH }}/Icon"$'\r'
           Rez -a /tmp/icons -o "${{ env.AU_PATH }}/Icon"$'\r'
           SetFile -a C "${{ env.VST3_PATH }}"
