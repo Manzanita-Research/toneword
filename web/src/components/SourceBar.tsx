@@ -30,30 +30,36 @@ export function SourceBar({ onMic, onFile, source, bypassed, onBypassToggle, onS
         Source
       </label>
 
-      <div className="flex items-center gap-0">
+      <div
+        className={`flex items-center rounded-md border transition-all duration-300 ease-out ${
+          source === 'mic'
+            ? 'border-terracotta'
+            : 'border-border hover:border-terracotta'
+        }`}
+      >
         <button
-          className={`font-mono text-xs px-4 py-2 rounded-l-md border border-r-0 transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
+          className={`font-mono text-xs px-4 py-2 rounded-l-md transition-all duration-300 ease-out cursor-pointer whitespace-nowrap ${
             source === 'mic'
-              ? 'bg-terracotta text-bg border-terracotta'
-              : 'bg-surface-2 border-border text-text hover:border-terracotta hover:text-terracotta'
+              ? 'bg-terracotta text-bg'
+              : 'bg-surface-2 text-text hover:text-terracotta'
           }`}
           onClick={onMic}
         >
           Guitar In
         </button>
         <button
-          className={`font-mono text-xs px-2 py-2 rounded-r-md border transition-all duration-300 ease-out cursor-pointer ${
-            hasDeviceSelected
-              ? 'bg-surface-2 border-terracotta/50 text-terracotta hover:bg-terracotta/10'
-              : 'bg-surface-2 border-border text-text-dim hover:border-terracotta hover:text-terracotta'
+          className={`font-mono text-xs px-2 py-2 rounded-r-md border-l transition-all duration-300 ease-out cursor-pointer flex items-center ${
+            source === 'mic'
+              ? 'bg-terracotta/15 text-terracotta border-terracotta/30 hover:bg-terracotta/25'
+              : 'bg-surface-2 text-text-dim border-border hover:text-terracotta'
           }`}
           onClick={onSettingsOpen}
           aria-label="Audio input settings"
           title="Choose input device"
         >
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="8" cy="8" r="2.5" />
-            <path d="M8 1.5v1.2M8 13.3v1.2M1.5 8h1.2M13.3 8h1.2M3.4 3.4l.85.85M11.75 11.75l.85.85M3.4 12.6l.85-.85M11.75 4.25l.85-.85" />
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+            <circle cx="12" cy="12" r="3" />
           </svg>
         </button>
       </div>
